@@ -1,11 +1,13 @@
 {
-  "name": "@lambda-feedback/response-area",
+  "name": "@lambda-feedback-segp-sandbox/response-area",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "@lambda-feedback-segp-sandbox/graphql-api": "0.1.0"
   },
   "devDependencies": {
     "@eslint/compat": "^1.0.1",
