@@ -2,9 +2,11 @@
   "name": "@lambda-feedback-segp-sandbox/response-area",
   "version": "0.1.0",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "test:types": "yarn tsc",
+    "test": "yarn test:types && yarn lint --max-warnings=0"
   },
   "dependencies": {
     "@lambda-feedback-segp-sandbox/graphql-api": "0.1.0"
