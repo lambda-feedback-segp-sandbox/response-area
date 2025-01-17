@@ -2,18 +2,18 @@ import {
   TeacherModularResponseFragment,
   StudentModularResponseFragment,
   TeacherCreateResponseInput,
-} from '@api/graphql'
-import {
-  IModularResponseSchema,
-  IResponseAreaAnswerSchema,
-} from '@modules/shared/schemas/question-form.schema'
-import { JsonNestedSchema } from '@utils/json'
+} from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import { ZodSchema } from 'zod'
 
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from './base-props.type'
+import {
+  IModularResponseSchema,
+  IResponseAreaAnswerSchema,
+} from './schemas/question-form.schema'
+import { JsonNestedSchema } from './utils/json'
 
 export abstract class ResponseAreaTub {
   public readonly responseType?: string
