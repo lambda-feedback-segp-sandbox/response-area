@@ -3,3 +3,6 @@
 
 # npm configuration
 /.npmrc
+
+# TypeScript
+tsconfig.tsbuildinfo
