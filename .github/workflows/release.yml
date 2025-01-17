@@ -19,6 +19,7 @@ jobs:
       - run: yarn install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: yarn test
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
