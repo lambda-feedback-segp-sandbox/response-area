@@ -1,6 +1,7 @@
-import { ZodJson } from '@utils/form'
-import { jsonNestedSchema } from '@utils/json'
 import { z } from 'zod'
+
+import { ZodJson } from '../utils/form'
+import { jsonNestedSchema } from '../utils/json'
 
 export const questionSettings = z.object({
   displayWorkedSolution: z.boolean().optional(),
