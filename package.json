@@ -18,6 +18,7 @@
     "@eslint/compat": "^1.0.1",
     "@eslint/js": "^9.3.0",
     "@next/eslint-plugin-next": "^14.2.3",
+    "@types/lodash": "^4.14.178",
     "@types/react": "18.3.3",
     "eslint": "^9.3.0",
     "eslint-plugin-react": "^7.34.2",
