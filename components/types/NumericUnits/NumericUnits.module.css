@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  max-width: 100%;
+}
+
+.number {
+  width: 12ch;
+  margin-right: 2ch;
+}
+
+.unit {
+  width: 12ch;
+}
+
+.powered {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: orange;
+  margin-bottom: 0;
+}
+
+.interp {
+  color: darkgrey;
+}

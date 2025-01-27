@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.inputStyles {
+  max-width: 20rem;
+}
+
+.preText {
+  margin-right: 1rem;
+}
+
+.postText {
+  margin-left: 1rem;
+}

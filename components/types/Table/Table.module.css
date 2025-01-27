@@ -1,0 +1,41 @@
+.inputStyles {
+  width: 5rem;
+  padding: 0.6rem;
+  padding-left: 1rem;
+}
+
+.tableStyles {
+  /* border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 0.5rem;
+  border-collapse: separate;
+  border-spacing: 0.5rem 0.5rem; */
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.preText {
+  margin-right: 1rem;
+}
+
+.postText {
+  margin-left: 1rem;
+}
+/* 
+.rowNames {
+}
+
+.colNames {
+} */
+
+.rowName {
+  margin: 0;
+}
+
+.colName {
+  margin: 0;
+  text-align: center;
+}
