@@ -1,11 +1,11 @@
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
-import { MatrixLegacy } from './Matrix.component'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'
 
 import { FullResponseAreaWizardProps } from '../base-props.type'
 
+import { MatrixLegacy } from './Matrix.component'
 import { matrixConfigSchema, matrixResponseAnswerSchema } from './Matrix.schema'
 
 export const MatrixWizard: React.FC<FullResponseAreaWizardProps> = props => {

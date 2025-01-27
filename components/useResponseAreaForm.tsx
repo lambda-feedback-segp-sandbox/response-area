@@ -4,12 +4,13 @@ import {
   StandardSubmissionDraftFragment,
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { useCallback, useState } from 'react'
+
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
   responseAreaAnswerSchema,
 } from '../schemas/question-form.schema'
-import { useCallback, useState } from 'react'
 
 import { useSubmissionContext } from './Set/Submission.context'
 

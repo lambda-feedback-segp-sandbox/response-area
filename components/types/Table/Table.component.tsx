@@ -1,10 +1,10 @@
-import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { useDeepCompareEffect } from '@hooks/useDeepCompareEffect'
-import { useViewPort } from '../../../hooks/useViewport'
+import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import _ from 'lodash'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 
+import { useViewPort } from '../../../hooks/useViewport'
 import { BaseResponseAreaProps } from '../base-props.type'
 import { IMatrixResponse, padMatrixFromRowsAndCols } from '../Matrix/helpers'
 

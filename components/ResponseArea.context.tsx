@@ -2,13 +2,14 @@ import {
   TeacherModularResponseFragment,
   StudentModularResponseFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { InputSymbolForDisplay } from './InputSymbols'
+import { createContext, useContext } from 'react'
+
 import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
 } from '../schemas/question-form.schema'
-import { createContext, useContext } from 'react'
 
+import { InputSymbolForDisplay } from './InputSymbols'
 import { PickedFeedback } from './useResponseAreaForm'
 
 export type ResponseAreaContextValue = {

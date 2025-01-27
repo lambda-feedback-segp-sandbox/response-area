@@ -3,12 +3,13 @@ import {
   StudentModularResponseFragment,
   TeacherCreateResponseInput,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { JsonNestedSchema } from '@utils/json'
+import { ZodSchema } from 'zod'
+
 import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
 } from '../../schemas/question-form.schema'
-import { JsonNestedSchema } from '@utils/json'
-import { ZodSchema } from 'zod'
 
 import {
   BaseResponseAreaProps,

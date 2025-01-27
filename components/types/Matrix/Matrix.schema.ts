@@ -1,8 +1,9 @@
+import { z } from 'zod'
+
 import {
   DEFAULT_COLS,
   DEFAULT_ROWS,
 } from '../../../schemas/question-form.schema'
-import { z } from 'zod'
 
 export const matrixConfigSchema = z
   .object({

@@ -1,5 +1,4 @@
 import { IModularResponseSchema } from '../../../schemas/question-form.schema'
-
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,

@@ -1,9 +1,10 @@
 import { Scalars } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { PickedFeedback } from '../useResponseAreaForm'
+
 import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
 } from '../../schemas/question-form.schema'
+import { PickedFeedback } from '../useResponseAreaForm'
 
 export interface BaseResponseAreaProps {
   handleSubmit?: () => void

@@ -1,5 +1,5 @@
-import SvgIcon from '@mui/material/SvgIcon'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import SvgIcon from '@mui/material/SvgIcon'
 import React from 'react'
 import { Stylable } from 'types/react'
 

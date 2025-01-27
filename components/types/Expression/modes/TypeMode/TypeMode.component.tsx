@@ -1,17 +1,17 @@
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
 import { MathText, Text } from '@lambda-feedback-segp-sandbox/math-components'
-import {
-  ResponsePreviewFormParams,
-  useResponsePreviewForm,
-} from '../../../../useResponsePreviewForm'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React, { memo, useEffect, useState } from 'react'
 import { Stylable } from 'types/react'
 
+import {
+  ResponsePreviewFormParams,
+  useResponsePreviewForm,
+} from '../../../../useResponsePreviewForm'
 import { ExpressionMenu } from '../../ExpressionMenu.component'
 import { InputMode } from '../types'
 

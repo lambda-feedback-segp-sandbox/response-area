@@ -1,5 +1,6 @@
-import usePrevious from '../../hooks/usePrevious'
 import { RefObject, useRef } from 'react'
+
+import usePrevious from '../../hooks/usePrevious'
 
 import { ResponseAreaTub } from './response-area-tub'
 

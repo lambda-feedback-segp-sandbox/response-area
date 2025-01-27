@@ -1,22 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
-import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
-import {
-  ResponsePreviewFormParams,
-  useResponsePreviewForm,
-} from '../../../../useResponsePreviewForm'
-import useDebounce from '../../../../../hooks/useDebounce'
-import { useViewPort } from '../../../../../hooks/useViewport'
-import { Done as DoneIcon } from '@mui/icons-material'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { OpenInFull as OpenInFullIcon } from '@mui/icons-material'
+import { Done as DoneIcon } from '@mui/icons-material'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/system/Box'
 import useTheme from '@mui/system/useTheme'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React, {
   memo,
   StrictMode,
@@ -30,6 +23,13 @@ import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
 import { Stylable } from 'types/react'
 
+import useDebounce from '../../../../../hooks/useDebounce'
+import { useViewPort } from '../../../../../hooks/useViewport'
+import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
+import {
+  ResponsePreviewFormParams,
+  useResponsePreviewForm,
+} from '../../../../useResponsePreviewForm'
 import { DialogPreview, ExpressionDialog } from '../../dialog'
 import { ExpressionMenu } from '../../ExpressionMenu.component'
 import { InputMode } from '../types'

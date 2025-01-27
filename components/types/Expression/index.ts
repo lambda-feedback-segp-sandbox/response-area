@@ -1,5 +1,4 @@
 import { ResponsePreviewFormParams } from '../../useResponsePreviewForm'
-
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,

@@ -1,12 +1,12 @@
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { useDeepCompareEffect } from '../../../hooks/useDeepCompareEffect'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { RadioButtonChecked as CircleChecked } from '@mui/icons-material'
 import { RadioButtonUnchecked as CircleUnchecked } from '@mui/icons-material'
 import Checkbox from '@mui/material/Checkbox'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { useState } from 'react'
 import * as ShuffleSeed from 'shuffle-seed'
 
+import { useDeepCompareEffect } from '../../../hooks/useDeepCompareEffect'
 import { BaseResponseAreaProps } from '../base-props.type'
 
 import { padAnswersFromOptions } from './helpers'

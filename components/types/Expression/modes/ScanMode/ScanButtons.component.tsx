@@ -1,9 +1,9 @@
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { Delete as DeleteIcon } from '@mui/icons-material'
 import { Crop as CropIcon } from '@mui/icons-material'
 import { Done as DoneIcon } from '@mui/icons-material'
 import { Undo as UndoIcon } from '@mui/icons-material'
 import Box from '@mui/system/Box'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

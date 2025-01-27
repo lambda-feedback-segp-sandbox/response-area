@@ -3,28 +3,29 @@ import {
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content'
-import { InputSymbols } from './InputSymbols'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { useResponseAreaTub } from './types/use-response-area-tub'
-import {
-  IModularResponseSchema,
-  IResponseAreaSchema,
-} from '../schemas/question-form.schema'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import LoadingButton from '@mui/lab/LoadingButton'
 import Box from '@mui/material/Box'
 import FormHelperText from '@mui/material/FormHelperText'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'
 import { Stylable } from 'types/react'
 
+import {
+  IModularResponseSchema,
+  IResponseAreaSchema,
+} from '../schemas/question-form.schema'
+
 import { ResponseAreaFeedback } from './Feedback/ResponseAreaFeedback.component'
+import { InputSymbols } from './InputSymbols'
 import { useResponseAreaContext } from './ResponseArea.context'
 import {
   ResponseAreaDisplayMode,
   ResponseAreaProvider,
 } from './ResponseArea.provider'
 import { ResponseAreaInput } from './ResponseAreaInput.component'
+import { useResponseAreaTub } from './types/use-response-area-tub'
 import { PickedFeedback } from './useResponseAreaForm'
 
 interface ResponseAreaProps extends Stylable {

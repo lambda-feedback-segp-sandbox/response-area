@@ -1,12 +1,12 @@
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
 import { MathText } from '@lambda-feedback-segp-sandbox/math-components'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { Cancel as CancelIcon } from '@mui/icons-material'
 import { CheckCircle as CheckCircleIcon } from '@mui/icons-material'
 import { RadioButtonUnchecked as RadioButtonUncheckedIcon } from '@mui/icons-material'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

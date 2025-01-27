@@ -1,11 +1,11 @@
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material'
 import Button from '@mui/material/Button'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormGroup from '@mui/material/FormGroup'
 import IconButton from '@mui/material/IconButton'
 import Switch from '@mui/material/Switch'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

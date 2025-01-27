@@ -2,6 +2,7 @@ import { StandardSubmissionFragment } from '@lambda-feedback-segp-sandbox/graphq
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { Math } from '@lambda-feedback-segp-sandbox/math-components'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import {
   Cancel as CancelIcon,
   CheckCircle as CheckCircleIcon,
@@ -9,7 +10,6 @@ import {
 import LoadingButton from '@mui/lab/LoadingButton'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

@@ -1,7 +1,7 @@
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { useMonaco } from '@monaco-editor/react'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 
 import { BaseResponseAreaProps } from '../base-props.type'
 

@@ -2,14 +2,15 @@ import {
   StudentModularResponseFragment,
   TeacherModularResponseFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { useResponseAreaTub } from './types/use-response-area-tub'
+import { noop } from 'lodash'
+import React from 'react'
+
 import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
 } from '../schemas/question-form.schema'
-import { noop } from 'lodash'
-import React from 'react'
 
+import { useResponseAreaTub } from './types/use-response-area-tub'
 import { PickedFeedback } from './useResponseAreaForm'
 
 interface ResponseAreaInputProps {

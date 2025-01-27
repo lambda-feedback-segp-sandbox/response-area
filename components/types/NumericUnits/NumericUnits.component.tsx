@@ -1,11 +1,9 @@
-
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { BaseResponseAreaProps } from '../base-props.type'
 
 import styles from './NumericUnits.module.css'
 import { numericUnitsResponseAnswerSchema } from './NumericUnits.schema'
-
 
 type NumericUnitsProps = Omit<
   BaseResponseAreaProps,

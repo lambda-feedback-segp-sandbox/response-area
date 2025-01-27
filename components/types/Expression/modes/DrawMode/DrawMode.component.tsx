@@ -1,9 +1,5 @@
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
-import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
-import {
-  ResponsePreviewFormParams,
-  useResponsePreviewForm,
-} from '../../../../useResponsePreviewForm'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import {
   Done as DoneIcon,
   OpenInFull as OpenInFullIcon,
@@ -12,7 +8,6 @@ import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { memo, RefObject, StrictMode, useEffect, useRef, useState } from 'react'
 import {
   Point,
@@ -21,6 +16,11 @@ import {
 } from 'react-sketch-canvas'
 import { Stylable } from 'types/react'
 
+import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
+import {
+  ResponsePreviewFormParams,
+  useResponsePreviewForm,
+} from '../../../../useResponsePreviewForm'
 import { DialogPreview, DialogToolbar } from '../../dialog'
 import { ExpressionDialog } from '../../dialog/ExpressionDialog.component'
 import { ExpressionMenu } from '../../ExpressionMenu.component'

@@ -1,9 +1,9 @@
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormGroup from '@mui/material/FormGroup'
 import FormLabel from '@mui/material/FormLabel'
 import Switch from '@mui/material/Switch'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React, { useState } from 'react'
 import { Stylable } from 'types/react'
 

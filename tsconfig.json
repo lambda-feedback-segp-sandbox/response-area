@@ -30,6 +30,12 @@
       "@styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_error.js", "declaration.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_error.js",
+    "declaration.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,3 +1,4 @@
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { Close as CloseIcon } from '@mui/icons-material'
 import { Done as DoneIcon } from '@mui/icons-material'
 import AppBar from '@mui/material/AppBar'
@@ -8,7 +9,6 @@ import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import useTheme from '@mui/system/useTheme'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

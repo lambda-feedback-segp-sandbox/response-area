@@ -11,16 +11,13 @@ import {
   useStudentUpsertSubmissionDraftMutation,
   StudentUpsertSubmissionDraftMutationVariables,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { createContext, useContext } from 'react'
+
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
 } from '../../schemas/question-form.schema'
-import { createContext, useContext } from 'react'
-
-import {
-  PickedDraftFeedback,
-  PickedFeedback,
-} from '../useResponseAreaForm'
+import { PickedDraftFeedback, PickedFeedback } from '../useResponseAreaForm'
 
 export type GetSubmissionPayloadFunction = (
   area:

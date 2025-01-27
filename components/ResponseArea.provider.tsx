@@ -2,13 +2,14 @@ import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { InputSymbolForDisplay } from './InputSymbols'
+
 import { useDeepMemo } from '../hooks/useDeepMemo'
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
 } from '../schemas/question-form.schema'
 
+import { InputSymbolForDisplay } from './InputSymbols'
 import {
   ResponseAreaContext,
   ResponseAreaContextValue,

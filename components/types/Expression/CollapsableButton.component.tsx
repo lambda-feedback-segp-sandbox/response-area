@@ -1,9 +1,9 @@
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/system/Box'
 import useTheme from '@mui/system/useTheme'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 
