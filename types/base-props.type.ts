@@ -6,7 +6,7 @@ import {
 import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
-} from './schemas/question-form.schema'
+} from '../schemas/question-form.schema'
 
 export type PickedFeedback = Pick<
   StandardSubmissionFragment,

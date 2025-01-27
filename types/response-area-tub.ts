@@ -6,14 +6,15 @@ import {
 import { ZodSchema } from 'zod'
 
 import {
+  IModularResponseSchema,
+  IResponseAreaAnswerSchema,
+} from '../schemas/question-form.schema'
+import { JsonNestedSchema } from '../utils/json'
+
+import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from './base-props.type'
-import {
-  IModularResponseSchema,
-  IResponseAreaAnswerSchema,
-} from './schemas/question-form.schema'
-import { JsonNestedSchema } from './utils/json'
 
 export abstract class ResponseAreaTub {
   public readonly responseType?: string
