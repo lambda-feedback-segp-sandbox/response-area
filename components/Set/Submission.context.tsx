@@ -14,7 +14,7 @@ import {
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
-} from '@../schemas/question-form.schema'
+} from '../../schemas/question-form.schema'
 import { createContext, useContext } from 'react'
 
 import {

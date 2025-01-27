@@ -1,5 +1,5 @@
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
-import { MatrixLegacy } from './types/Matrix/Matrix.component'
+import { MatrixLegacy } from './Matrix.component'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'

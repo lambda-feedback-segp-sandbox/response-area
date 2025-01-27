@@ -3,7 +3,7 @@ import {
   StandardSubmissionFragment,
   StandardSubmissionDraftFragment,
   StandardTeacherResponseAreaFragment,
-} from '@lambda-feedback-segp-sandbox/graphql-api/graphql'
+} from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import {
   IModularResponseSchema,
   IResponseAreaSchema,

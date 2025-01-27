@@ -1,10 +1,10 @@
 import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
-} from '@lambda-feedback-segp-sandbox/api/graphql-api'
-import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content/Content'
+} from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content'
 import { InputSymbols } from './InputSymbols'
-import { Text } from '@lambda-feedback-segp-sandbox/math-components/Math'
+import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { useResponseAreaTub } from './types/use-response-area-tub'
 import {
   IModularResponseSchema,

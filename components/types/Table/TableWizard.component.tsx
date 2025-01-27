@@ -1,4 +1,4 @@
-import { TextInput } from '@lamdbda-feedback-segp-sandbox/form-components/Form'
+import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'

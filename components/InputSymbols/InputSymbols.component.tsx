@@ -1,5 +1,5 @@
-import { Text } from '@components/Math/Text.component'
-import { makeStyles } from '@styles'
+import { Text } from '@lambda-feedback-segp-sandbox/math-components'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

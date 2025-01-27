@@ -1,8 +1,8 @@
-import { StandardSubmissionFragment } from '@api/graphql'
-import { Text } from '@components/Math'
+import { StandardSubmissionFragment } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import Alert, { AlertColor } from '@mui/material/Alert'
 import Typography from '@mui/material/Typography'
-import { makeStyles } from '@styles'
+import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
 import { Stylable } from 'types/react'
 

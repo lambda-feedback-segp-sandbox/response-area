@@ -1,7 +1,7 @@
 import { StandardSubmissionFragment } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql-sdk'
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { Math } from '@lambda-feedback-segp-sandbox/math-components/Math.component'
+import { Math } from '@lambda-feedback-segp-sandbox/math-components'
 import {
   Cancel as CancelIcon,
   CheckCircle as CheckCircleIcon,

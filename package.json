@@ -12,9 +12,12 @@
     "@lambda-feedback-segp-sandbox/graphql-api": "0.1.0",
     "@lambda-feedback-segp-sandbox/labelled-content": "0.1.0",
     "@lambda-feedback-segp-sandbox/form-components": "0.2.0",
-    "@lambda-feedback-segp-sandbox/math-components": "0.1.0",
+    "@lambda-feedback-segp-sandbox/icon-components": "0.1.0",
+    "@lambda-feedback-segp-sandbox/math-components": "0.2.0",
     "@lambda-feedback-segp-sandbox/styles": "0.1.0",
+    "@lambda-feedback-segp-sandbox/loading-components": "0.1.0",
     "lodash": "^4.17.21",
+    "@monaco-editor/react": "^4.6.0",
     "@mui/lab": "^5.0.0-alpha.100",
     "@mui/material": "^5.15.20",
     "react": "^18.3.1",
@@ -36,7 +39,10 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "prettier": "^3.3.3",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.11.0"
+    "typescript-eslint": "^7.11.0",
+    "@types/react-input-autosize": "^2.2.4",
+    "@types/shuffle-seed": "^1.1.3",
+    "@types/katex": "^0.16.7"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

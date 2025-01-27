@@ -1,5 +1,5 @@
-import { TextCursor } from '@components/Icons/TextCursor.component'
-import { TextCursorInverted } from '@components/Icons/TextCursorInverted.component'
+import { TextCursor } from '@lambda-feedback-segp-sandbox/icon-components'
+import { TextCursorInverted } from '@lambda-feedback-segp-sandbox/icon-components'
 import { CameraAlt as CameraAltIcon } from '@mui/icons-material'
 import { Draw as DrawIcon } from '@mui/icons-material'
 import MenuItem from '@mui/material/MenuItem'

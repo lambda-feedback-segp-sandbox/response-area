@@ -1,4 +1,4 @@
-import { Text } from '@lambda-feedback-segp-sandbox/math-components/Text.component'
+import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { useDeepCompareEffect } from '@hooks/useDeepCompareEffect'
 import { useViewPort } from '../../../hooks/useViewport'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'

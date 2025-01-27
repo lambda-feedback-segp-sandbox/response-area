@@ -1,4 +1,4 @@
-import { Loading } from '@components/Loading'
+import { Loading } from '@lambda-feedback-segp-sandbox/loading-components'
 import Editor from '@monaco-editor/react'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 
