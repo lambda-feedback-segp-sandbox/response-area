@@ -790,7 +790,7 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lambda-feedback-segp-sandbox/form-components@0.2.0", "@lambda-feedback-segp-sandbox/form-components@^0.2.0":
+"@lambda-feedback-segp-sandbox/form-components@^0.2.0":
   version "0.2.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.2.0/2dd5db142e859f38c44e0d5d282086bec9e57b73#2dd5db142e859f38c44e0d5d282086bec9e57b73"
   integrity sha512-KHWk5icBA4Py3Wcc5ZzScKlDkO9pzbtz8FuOe3uWS4XFsF0cPXEqpTpt3An7jwBoFvfGMNFIlQvjlOdaMxEOug==
@@ -827,22 +827,6 @@
     react-query "^3.39.0"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/graphql-api@0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/graphql-api/0.1.0/2cdc62ca45bdab4e45470008baddaa487e643ceb#2cdc62ca45bdab4e45470008baddaa487e643ceb"
-  integrity sha512-WL8Pxpuhf586kf2UB5mDrHZHsbaFnqI9719CV1f3iv8feVqpy3kNCPISa5qo6jYrlSEeabmmco8G14wAaaVXIA==
-  dependencies:
-    axios "^1.7.2"
-    eslint-config-prettier "^9.1.0"
-    eslint-import-resolver-typescript "^3.6.3"
-    eslint-plugin-import "^2.31.0"
-    firebase "^11.0.1"
-    graphql "^15.6.0"
-    graphql-request "^4.3.0"
-    lodash "^4.17.21"
-    react-query "^3.39.0"
-    zod "^3.14.4"
-
 "@lambda-feedback-segp-sandbox/graphql-api@0.2.0":
   version "0.2.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/graphql-api/0.2.0/a00d13a2da3e151677133157090964f074ab795b#a00d13a2da3e151677133157090964f074ab795b"
@@ -860,7 +844,24 @@
     react-query "^3.39.0"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/icon-components@0.1.0":
+"@lambda-feedback-segp-sandbox/graphql-api@^0.3.0":
+  version "0.3.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/graphql-api/0.3.0/44ee538eb07f4448992e25a32dc23386d34e1657#44ee538eb07f4448992e25a32dc23386d34e1657"
+  integrity sha512-4Q98FP72wBY2O7eSmd4Xp79Fs/my93Qx8wHTfmXHOEgDjkH/tnW87lJ8Z7hF8he/wVsGc25ln/QkR5HZXV147A==
+  dependencies:
+    axios "^1.7.2"
+    eslint-config-prettier "^9.1.0"
+    eslint-import-resolver-typescript "^3.6.3"
+    eslint-plugin-import "^2.31.0"
+    firebase "^11.0.1"
+    graphql "^15.6.0"
+    graphql-request "^4.3.0"
+    graphql-tag "^2.11.0"
+    lodash "^4.17.21"
+    react-query "^3.39.0"
+    zod "^3.14.4"
+
+"@lambda-feedback-segp-sandbox/icon-components@^0.1.0":
   version "0.1.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/icon-components/0.1.0/8430c06a21d1c8bf05d663994e9106e62b306745#8430c06a21d1c8bf05d663994e9106e62b306745"
   integrity sha512-kAA89s5z862uawonQnEB2ZtebBYuh4CVMznDxxSH/j9Eo6Qa30aC97IZQqF89SZ5XV0o3Tu+n+SZOb+2jeg8+A==
@@ -870,7 +871,7 @@
     next "^14.2.4"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/labelled-content@0.1.0":
+"@lambda-feedback-segp-sandbox/labelled-content@^0.1.0":
   version "0.1.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/labelled-content/0.1.0/c8a1425e5ff867a8c28e1e41bb4a0d86549f2a9e#c8a1425e5ff867a8c28e1e41bb4a0d86549f2a9e"
   integrity sha512-o+DCcD69zaZgcgCdSEjFLrFq/K03CVSsa1Tf1dRqiaQewmbxiL6//B2rPkzsDEnd9W8FziYdY7ZPSuG4ik6FBQ==
@@ -889,7 +890,7 @@
     "@mui/material" "^5.15.20"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/math-components@0.2.0":
+"@lambda-feedback-segp-sandbox/math-components@^0.2.0":
   version "0.2.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/math-components/0.2.0/aa535a1c8e4595d5103ee3947a159bf3f9cf9cb7#aa535a1c8e4595d5103ee3947a159bf3f9cf9cb7"
   integrity sha512-doOsKnMG+UMwVCKFZwK7IVJQwfBLaS11wPw7ZQOUrsXirCAVW4yfzdrDHlasMEvjlqMmsjB42NiT/9LrVIXYSQ==
