@@ -56,19 +56,9 @@ interface ResponseAreaProps extends Stylable {
   displayMode?: ResponseAreaDisplayMode
 }
 
-// Turns into the controller component
-export const ResponseArea: React.FC<ResponseAreaProps> = ({
-  area,
-  onChange,
-  inititialAnswer,
-  inititialFeedback,
-  hideCheck,
-  hideSave,
-  wrapLabel,
-  ActionButtons,
-  displayMode,
-  className,
-}) => {
+export const ResponseArea: React.FC<ResponseAreaProps> = props => {
+  const { area, onChange, inititialAnswer, inititialFeedback } = props
+
   const {
     inFlight,
     handleChange,
@@ -86,7 +76,7 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
     inititialFeedback,
   })
 
-  const returnValues = useDeepMemo(() => {
+  const memoProps = useDeepMemo(() => {
     const safeSymbols:
       | (InputSymbolForDisplay & { isVisible: boolean })[]
       | undefined = area.inputSymbols
@@ -109,19 +99,19 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
           : area.displaySymbols,
       showLivePreview: area.livePreview,
 
-      inputDisplayValueMemo: inputDisplayValue,
-      handleChangeMemo: handleChange,
-      handleCheckMemo: handleCheck,
-      handleDraftSaveMemo: handleDraftSave,
-      inFlightMemo: inFlight,
-      feedbackMemo: feedback,
-      validationMessageMemo: validationMessage,
-      requestErrorMemo: requestError,
+      inputDisplayValue,
+      handleChange,
+      handleCheck,
+      handleDraftSave,
+      inFlight,
+      feedback,
+      validationMessage,
+      requestError,
 
-      displayModeMemo: displayMode,
-      isTeacherModeMemo: isTeacherMode,
-      hideCheckMemo: hideCheck,
-      hideSaveMemo: hideSave,
+      displayMode: props.displayMode,
+      isTeacherMode,
+      hideCheck: props.hideCheck,
+      hideSave: props.hideSave,
     }
   }, [
     area,
@@ -133,32 +123,13 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
     inputDisplayValue,
     requestError,
     validationMessage,
-    hideCheck,
-    hideSave,
+    props.hideCheck,
+    props.hideSave,
   ])
 
-  const {
-    inputType,
-    visibleSymbols,
-    displayInputSymbols,
-    showLivePreview,
-    handleChangeMemo,
-    handleCheckMemo,
-    handleDraftSaveMemo,
-    inFlightMemo,
-    responseAreaId,
-    universalResponseAreaId,
-    preResponseText,
-    postResponseText,
-    inputDisplayValueMemo,
-    feedbackMemo,
-    validationMessageMemo,
-    requestErrorMemo,
-    displayModeMemo,
-    isTeacherModeMemo,
-    hideCheckMemo,
-    hideSaveMemo,
-  } = returnValues
+  const viewProps = { ...props, ...memoProps }
+
+  const { displayMode, inputType } = viewProps
 
   const tubRef = useResponseAreaTub(inputType)
 
@@ -180,32 +151,5 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
     tubRef.current.initWithResponse(area.response)
   }
 
-  return (
-    <ResponseAreaView
-      ActionButtons={ActionButtons}
-      className={className}
-      responseAreaId={responseAreaId}
-      universalResponseAreaId={universalResponseAreaId}
-      tub={tubRef.current}
-      inputType={inputType}
-      preResponseText={preResponseText}
-      postResponseText={postResponseText}
-      visibleSymbols={visibleSymbols}
-      displayInputSymbols={displayInputSymbols}
-      showLivePreview={showLivePreview}
-      inputDisplayValue={inputDisplayValueMemo}
-      handleChange={handleChangeMemo}
-      handleCheck={handleCheckMemo}
-      handleDraftSave={handleDraftSaveMemo}
-      inFlight={inFlightMemo}
-      feedback={feedbackMemo}
-      validationMessage={validationMessageMemo}
-      requestError={requestErrorMemo}
-      displayMode={displayModeMemo}
-      isTeacherMode={isTeacherModeMemo}
-      hideCheck={hideCheckMemo}
-      hideSave={hideSaveMemo}
-      wrapLabel={wrapLabel}
-    />
-  )
+  return <ResponseAreaView tub={tubRef.current} {...viewProps} />
 }
