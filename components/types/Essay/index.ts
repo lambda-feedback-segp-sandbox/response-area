@@ -1,10 +1,10 @@
 import { z } from 'zod'
 
+import { ResponseAreaTub } from '../../../response-area-tub'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { EssayInput } from './Essay.component'
 

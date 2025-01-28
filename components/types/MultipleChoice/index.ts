@@ -1,8 +1,8 @@
+import { ResponseAreaTub } from '../../../response-area-tub'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { padAnswersFromOptions } from './helpers'
 import { MultipleChoice } from './MultipleChoice.component'

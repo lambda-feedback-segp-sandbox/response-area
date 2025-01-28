@@ -1,8 +1,8 @@
+import { ResponseAreaTub } from '../../../response-area-tub'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { TextInput } from './TextInput.component'
 import { textResponseAnswerSchema } from './TextInput.schema'

@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import { z } from 'zod'
 
+import { ResponseAreaTub } from '../../../response-area-tub'
 import {
   DEFAULT_COLS,
   DEFAULT_ROWS,
@@ -9,7 +10,6 @@ import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { padMatrixFromRowsAndCols } from './helpers'
 import { Matrix } from './Matrix.component'

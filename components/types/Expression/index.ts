@@ -1,9 +1,9 @@
+import { ResponseAreaTub } from '../../../response-area-tub'
 import { ResponsePreviewFormParams } from '../../useResponsePreviewForm'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { ExpressionInput } from './Expression.component'
 import {
