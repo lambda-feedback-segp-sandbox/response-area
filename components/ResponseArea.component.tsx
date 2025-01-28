@@ -182,6 +182,8 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
 
   return (
     <ResponseAreaView
+      ActionButtons={ActionButtons}
+      className={className}
       responseAreaId={responseAreaId}
       universalResponseAreaId={universalResponseAreaId}
       tub={tubRef.current}
