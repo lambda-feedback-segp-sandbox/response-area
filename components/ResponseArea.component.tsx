@@ -12,9 +12,7 @@ import {
 } from '../schemas/question-form.schema'
 
 import { InputSymbolForDisplay } from './InputSymbols'
-import {
-  ResponseAreaDisplayMode
-} from './ResponseArea.provider'
+import { ResponseAreaDisplayMode } from './ResponseArea.provider'
 import { ResponseAreaView } from './RespoonseAreaV2'
 import { useResponseAreaTub } from './types/use-response-area-tub'
 import { PickedFeedback, useResponseAreaForm } from './useResponseAreaForm'
@@ -70,7 +68,6 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
   displayMode,
   className,
 }) => {
-
   const {
     inFlight,
     handleChange,
@@ -111,19 +108,19 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
           : area.displaySymbols,
       showLivePreview: area.livePreview,
 
-      inputDisplayValueMemo : inputDisplayValue,
+      inputDisplayValueMemo: inputDisplayValue,
       handleChangeMemo: handleChange,
       handleCheckMemo: handleCheck,
       handleDraftSaveMemo: handleDraftSave,
       inFlightMemo: inFlight,
-      feedbackMemo : feedback,
-      validationMessageMemo : validationMessage,
-      requestErrorMemo : requestError,
+      feedbackMemo: feedback,
+      validationMessageMemo: validationMessage,
+      requestErrorMemo: requestError,
 
-      displayModeMemo : displayMode,
-      isTeacherModeMemo : isTeacherMode,
-      hideCheckMemo : hideCheck,
-      hideSaveMemo : hideSave,
+      displayModeMemo: displayMode,
+      isTeacherModeMemo: isTeacherMode,
+      hideCheckMemo: hideCheck,
+      hideSaveMemo: hideSave,
     }
   }, [
     area,
@@ -148,18 +145,18 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
     handleCheckMemo,
     handleDraftSaveMemo,
     inFlightMemo,
-    responseAreaId, 
-    universalResponseAreaId, 
+    responseAreaId,
+    universalResponseAreaId,
     preResponseText,
-    postResponseText, 
-    inputDisplayValueMemo, 
-    feedbackMemo, 
-    validationMessageMemo, 
-    requestErrorMemo, 
-    displayModeMemo, 
-    isTeacherModeMemo, 
-    hideCheckMemo, 
-    hideSaveMemo
+    postResponseText,
+    inputDisplayValueMemo,
+    feedbackMemo,
+    validationMessageMemo,
+    requestErrorMemo,
+    displayModeMemo,
+    isTeacherModeMemo,
+    hideCheckMemo,
+    hideSaveMemo,
   } = returnValues
 
   const tubRef = useResponseAreaTub(inputType)
@@ -185,7 +182,6 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
       feedback={feedbackMemo}
       validationMessage={validationMessageMemo}
       requestError={requestErrorMemo}
-
       displayMode={displayModeMemo}
       isTeacherMode={isTeacherModeMemo}
       hideCheck={hideCheckMemo}

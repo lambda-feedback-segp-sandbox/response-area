@@ -14,7 +14,6 @@ import { ResponseAreaFeedback } from './Feedback/ResponseAreaFeedback.component'
 import { InputSymbolForDisplay, InputSymbols } from './InputSymbols'
 import { PickedFeedback } from './useResponseAreaForm'
 
-
 interface ResponseAreaViewProps extends Stylable {
   ActionButtons?: React.ReactNode
 
