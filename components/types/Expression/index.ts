@@ -1,9 +1,10 @@
-import { ResponseAreaTub } from '../../../response-area-tub'
-import { ResponsePreviewFormParams } from '../../useResponsePreviewForm'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
-} from '../base-props.type'
+  ResponseAreaTub,
+} from '@lambda-feedback-segp-sandbox/response-area-base'
+
+import { ResponsePreviewFormParams } from '../../useResponsePreviewForm'
 
 import { ExpressionInput } from './Expression.component'
 import {

@@ -1,7 +1,6 @@
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { useCallback } from 'react'
-
-import { BaseResponseAreaProps } from '../base-props.type'
 
 type EssayInputProps = Omit<
   BaseResponseAreaProps,

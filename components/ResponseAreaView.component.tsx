@@ -1,11 +1,11 @@
 import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
+import { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import LoadingButton from '@mui/lab/LoadingButton'
 import Box from '@mui/material/Box'
 import FormHelperText from '@mui/material/FormHelperText'
 import { noop } from 'lodash'
-import { ResponseAreaTub } from 'response-area-tub'
 import { Stylable } from 'types/react'
 
 import { IResponseAreaAnswerSchema } from '../schemas/question-form.schema'

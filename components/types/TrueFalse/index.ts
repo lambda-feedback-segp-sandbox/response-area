@@ -1,9 +1,10 @@
-import { ResponseAreaTub } from '../../../response-area-tub'
-import { IModularResponseSchema } from '../../../schemas/question-form.schema'
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
-} from '../base-props.type'
+  ResponseAreaTub,
+} from '@lambda-feedback-segp-sandbox/response-area-base'
+
+import { IModularResponseSchema } from '../../../schemas/question-form.schema'
 
 import { TrueFalse } from './TrueFalse.component'
 import { trueFalseAnswerSchema } from './TrueFalse.schema'

@@ -1,10 +1,10 @@
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
+import { BaseResponseAreaWizardProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'
 import { Stylable } from 'types/react'
 
-import { BaseResponseAreaWizardProps } from '../base-props.type'
 import { IMatrixResponse } from '../Matrix/helpers'
 
 import { Table } from './Table.component'
