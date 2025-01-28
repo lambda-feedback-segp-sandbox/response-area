@@ -164,6 +164,22 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
 
   if (!tubRef.current) return null
 
+  if (!area.response || displayMode === 'peek') {
+    tubRef.current.initWithDefault()
+  } else if (
+    '__typename' in area.response &&
+    area.response.__typename === 'TeacherModularResponse'
+  ) {
+    tubRef.current.initWithTeacherFragment(area.response)
+  } else if (
+    '__typename' in area.response &&
+    area.response.__typename === 'StudentModularResponse'
+  ) {
+    tubRef.current.initWithStudentFragment(area.response)
+  } else {
+    tubRef.current.initWithResponse(area.response)
+  }
+
   return (
     <ResponseAreaView
       responseAreaId={responseAreaId}
