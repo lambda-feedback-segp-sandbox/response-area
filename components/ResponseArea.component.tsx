@@ -12,10 +12,11 @@ import {
 } from '../schemas/question-form.schema'
 
 import { InputSymbolForDisplay } from './InputSymbols'
-import { ResponseAreaDisplayMode } from './ResponseArea.provider'
-import { ResponseAreaView } from './RespoonseAreaV2'
+import { ResponseAreaView } from './ResponseAreaView.component'
 import { useResponseAreaTub } from './types/use-response-area-tub'
 import { PickedFeedback, useResponseAreaForm } from './useResponseAreaForm'
+
+export type ResponseAreaDisplayMode = 'normal' | 'peek'
 
 interface ResponseAreaProps extends Stylable {
   area:
