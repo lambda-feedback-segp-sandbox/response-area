@@ -1,14 +1,8 @@
+import { useDeepMemo } from '@hooks/useDeepMemo'
 import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content'
-import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
-import LoadingButton from '@mui/lab/LoadingButton'
-import Box from '@mui/material/Box'
-import FormHelperText from '@mui/material/FormHelperText'
-import { noop } from 'lodash'
 import React from 'react'
 import { Stylable } from 'types/react'
 
@@ -17,16 +11,13 @@ import {
   IResponseAreaSchema,
 } from '../schemas/question-form.schema'
 
-import { ResponseAreaFeedback } from './Feedback/ResponseAreaFeedback.component'
-import { InputSymbols } from './InputSymbols'
-import { useResponseAreaContext } from './ResponseArea.context'
+import { InputSymbolForDisplay } from './InputSymbols'
 import {
-  ResponseAreaDisplayMode,
-  ResponseAreaProvider,
+  ResponseAreaDisplayMode
 } from './ResponseArea.provider'
-import { ResponseAreaInput } from './ResponseAreaInput.component'
+import { ResponseAreaView } from './RespoonseAreaV2'
 import { useResponseAreaTub } from './types/use-response-area-tub'
-import { PickedFeedback } from './useResponseAreaForm'
+import { PickedFeedback, useResponseAreaForm } from './useResponseAreaForm'
 
 interface ResponseAreaProps extends Stylable {
   area:
@@ -66,6 +57,7 @@ interface ResponseAreaProps extends Stylable {
   displayMode?: ResponseAreaDisplayMode
 }
 
+// Turns into the controller component
 export const ResponseArea: React.FC<ResponseAreaProps> = ({
   area,
   onChange,
@@ -78,316 +70,127 @@ export const ResponseArea: React.FC<ResponseAreaProps> = ({
   displayMode,
   className,
 }) => {
-  const { classes, cx } = useStyles()
-
-  return (
-    <ResponseAreaProvider
-      area={area}
-      onChange={onChange}
-      inititialAnswer={inititialAnswer}
-      inititialFeedback={inititialFeedback}
-      hideCheck={hideCheck}
-      hideSave={hideSave}
-      displayMode={displayMode}>
-      <div className={cx(className)}>
-        {wrapLabel ? (
-          <LabelledContent
-            label={wrapLabel!}
-            className={classes.labelledContent}>
-            <ResponseAreaInnerWrapper ActionButtons={ActionButtons} />
-          </LabelledContent>
-        ) : (
-          <Box sx={{ p: 2 }}>
-            <ResponseAreaInnerWrapper ActionButtons={ActionButtons} />
-          </Box>
-        )}
-      </div>
-    </ResponseAreaProvider>
-  )
-}
-
-const ResponseAreaInnerWrapper: React.FC<{
-  ActionButtons?: React.ReactNode
-}> = ({ ActionButtons }) => {
-  const { classes, cx } = useStyles()
-
-  const { inputType } = useResponseAreaContext()
-
-  const tubRef = useResponseAreaTub(inputType)
-
-  return (
-    <div
-      className={cx(
-        classes.responseAreaInnerWrapper,
-        'reference-response-area-inner-wrapper',
-        tubRef?.current?.displayAlwaysInColumn
-          ? classes.alwaysColumn
-          : undefined,
-      )}>
-      <ResponseAreaInner />
-      {ActionButtons && (
-        <div
-          className={cx(
-            classes.actionButtons,
-            'reference-buttons',
-            tubRef?.current?.displayAlwaysInColumn
-              ? classes.actionButtonsAlwaysColumn
-              : undefined,
-          )}>
-          {ActionButtons}
-        </div>
-      )}
-    </div>
-  )
-}
-
-const ResponseAreaInner: React.FC = () => {
-  const { classes, cx } = useStyles()
 
   const {
-    responseAreaId,
-    universalResponseAreaId,
-    inputType,
-    response,
-    visibleSymbols,
-    preResponseText,
-    postResponseText,
-    showLivePreview,
-    displayInputSymbols,
-
+    inFlight,
+    handleChange,
+    handleCheck,
+    handleDraftSave,
     inputDisplayValue,
+    feedback,
+    validationMessage,
+    requestError,
+    isTeacherMode,
+  } = useResponseAreaForm({
+    area,
+    onChange,
+    inititialAnswer,
+    inititialFeedback,
+  })
+
+  const returnValues = useDeepMemo(() => {
+    const safeSymbols:
+      | (InputSymbolForDisplay & { isVisible: boolean })[]
+      | undefined = area.inputSymbols
+
+    const visibleSymbols: InputSymbolForDisplay[] = safeSymbols
+      ? safeSymbols.filter(symbol => symbol.isVisible)
+      : []
+
+    return {
+      responseAreaId: 'id' in area ? area.id : undefined,
+      universalResponseAreaId: area.universalResponseAreaId,
+      inputType: area.response?.responseType!,
+      response: area.response ?? undefined,
+      visibleSymbols,
+      preResponseText: area.preResponseText ?? undefined,
+      postResponseText: area.postResponseText ?? undefined,
+      displayInputSymbols:
+        'displayInputSymbols' in area
+          ? area.displayInputSymbols
+          : area.displaySymbols,
+      showLivePreview: area.livePreview,
+
+      inputDisplayValueMemo : inputDisplayValue,
+      handleChangeMemo: handleChange,
+      handleCheckMemo: handleCheck,
+      handleDraftSaveMemo: handleDraftSave,
+      inFlightMemo: inFlight,
+      feedbackMemo : feedback,
+      validationMessageMemo : validationMessage,
+      requestErrorMemo : requestError,
+
+      displayModeMemo : displayMode,
+      isTeacherModeMemo : isTeacherMode,
+      hideCheckMemo : hideCheck,
+      hideSaveMemo : hideSave,
+    }
+  }, [
+    area,
+    feedback,
     handleChange,
     handleCheck,
     handleDraftSave,
     inFlight,
-    feedback,
-    validationMessage,
+    inputDisplayValue,
     requestError,
-
-    displayMode,
-    isTeacherMode,
+    validationMessage,
     hideCheck,
     hideSave,
-  } = useResponseAreaContext()
+  ])
+
+  const {
+    inputType,
+    visibleSymbols,
+    displayInputSymbols,
+    showLivePreview,
+    handleChangeMemo,
+    handleCheckMemo,
+    handleDraftSaveMemo,
+    inFlightMemo,
+    responseAreaId, 
+    universalResponseAreaId, 
+    preResponseText,
+    postResponseText, 
+    inputDisplayValueMemo, 
+    feedbackMemo, 
+    validationMessageMemo, 
+    requestErrorMemo, 
+    displayModeMemo, 
+    isTeacherModeMemo, 
+    hideCheckMemo, 
+    hideSaveMemo
+  } = returnValues
 
   const tubRef = useResponseAreaTub(inputType)
 
+  if (!tubRef.current) return null
+
   return (
-    <div className={cx(classes.verticalArrangement)}>
-      <div
-        className={cx(
-          tubRef.current?.displayInFlexContainer
-            ? classes.innerContentWrapper
-            : undefined,
-          tubRef?.current?.displayAlwaysInColumn
-            ? classes.alwaysColumn
-            : undefined,
-        )}>
-        {preResponseText && tubRef.current?.delegatePreResponseText && (
-          <Text
-            className={cx(
-              classes.centered,
-              classes.preText,
-              'reference-pretext',
-            )}
-            data={preResponseText}
-          />
-        )}
+    <ResponseAreaView
+      responseAreaId={responseAreaId}
+      universalResponseAreaId={universalResponseAreaId}
+      tub={tubRef.current}
+      inputType={inputType}
+      preResponseText={preResponseText}
+      postResponseText={postResponseText}
+      visibleSymbols={visibleSymbols}
+      displayInputSymbols={displayInputSymbols}
+      showLivePreview={showLivePreview}
+      inputDisplayValue={inputDisplayValueMemo}
+      handleChange={handleChangeMemo}
+      handleCheck={handleCheckMemo}
+      handleDraftSave={handleDraftSaveMemo}
+      inFlight={inFlightMemo}
+      feedback={feedbackMemo}
+      validationMessage={validationMessageMemo}
+      requestError={requestErrorMemo}
 
-        <div
-          className={cx(
-            classes.centered,
-            tubRef?.current?.displayWideInput
-              ? classes.inputContainerWide
-              : undefined,
-          )}>
-          <ResponseAreaInput
-            setResponseValue={handleChange}
-            responseAreaId={responseAreaId}
-            universalResponseAreaId={universalResponseAreaId}
-            inputType={inputType}
-            value={inputDisplayValue}
-            onSubmit={hideCheck ? noop : handleCheck}
-            onDraftSave={hideSave ? noop : handleDraftSave}
-            response={response}
-            preResponseText={preResponseText}
-            postResponseText={postResponseText}
-            submissionFeedback={feedback}
-            typesafeErrorMessage={validationMessage}
-            checkIsLoading={!!inFlight}
-            showLivePreview={showLivePreview}
-            displayMode={displayMode}
-            isTeacherMode={isTeacherMode}
-          />
-
-          {validationMessage && tubRef.current?.delegateErrorMessage && (
-            <FormHelperText className={classes.validationMessage}>
-              {validationMessage}
-            </FormHelperText>
-          )}
-        </div>
-
-        {postResponseText && tubRef.current?.delegatePostResponseText && (
-          <Text
-            className={cx(
-              classes.centered,
-              classes.postText,
-              'reference-posttext',
-            )}
-            data={postResponseText}
-          />
-        )}
-
-        <div className={cx(classes.centered, classes.buttons)}>
-          {!hideSave && (
-            <div className={cx(classes.centered, 'reference-save-container')}>
-              <LoadingButton
-                size={'small'}
-                variant={'contained'}
-                onClick={handleDraftSave}
-                loading={inFlight}>
-                SAVE
-              </LoadingButton>
-            </div>
-          )}
-
-          {!hideCheck && tubRef.current?.delegateCheck && (
-            <div className={cx(classes.centered, 'reference-check-container')}>
-              <LoadingButton
-                size={'small'}
-                variant={'contained'}
-                onClick={handleCheck}
-                loading={inFlight}>
-                CHECK
-              </LoadingButton>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {displayInputSymbols && <InputSymbols symbols={visibleSymbols} />}
-
-      {feedback && tubRef.current?.delegateFeedback && (
-        <ResponseAreaFeedback response={feedback} />
-      )}
-
-      {requestError ? (
-        <div>
-          <p
-            className={
-              classes.requestError
-            }>{`The request failed ${JSON.stringify(requestError)}`}</p>
-        </div>
-      ) : null}
-    </div>
+      displayMode={displayModeMemo}
+      isTeacherMode={isTeacherModeMemo}
+      hideCheck={hideCheckMemo}
+      hideSave={hideSaveMemo}
+      wrapLabel={wrapLabel}
+    />
   )
 }
-
-const useStyles = makeStyles()(theme => ({
-  //
-  // LAYOUTS
-  //
-
-  // optional wrapper around the 'inner wrapper' for the labelled content box.
-  // Needs padding to prevent the inner elements from touching the borders
-  labelledContent: {
-    padding: theme.spacing(2),
-  },
-
-  // wrapper around the buttons column (when displayed) and the 'vertical arrangement'
-  // displayed in a row on larger screens, in a column on smaller screens
-  responseAreaInnerWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
-    gap: theme.spacing(2),
-  },
-
-  // wrapper around the 'vertical arrangement': 'inner content', symbols, feedback, request error
-  // always displayed in a column
-  verticalArrangement: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: theme.spacing(2),
-    justifyContent: 'center',
-  },
-
-  // wrapper around the 'inner content': pre/post text, input, check button, live preview
-  // displayed in a row on larger screens, in a column on smaller screens
-  innerContentWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
-    gap: theme.spacing(2),
-    justifyContent: 'center',
-  },
-
-  actionButtons: {
-    display: 'flex',
-    justifyContent: 'start',
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    gap: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-      maxWidth: theme.spacing(18),
-      alignSelf: 'end',
-    },
-  },
-
-  actionButtonsAlwaysColumn: {
-    flexDirection: 'row',
-    alignSelf: 'end',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
-  },
-
-  //
-  // UTILITIES
-  //
-  centered: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  buttons: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    gap: theme.spacing(1),
-    alignItems: 'stretch',
-  },
-
-  //
-  // ELEMENTS
-  //
-  validationMessage: {
-    color: 'red',
-    fontSize: 16,
-  },
-  requestError: {
-    padding: theme.spacing(2),
-    backgroundColor: '#58aed6',
-  },
-  preText: {
-    margin: 0,
-    maxWidth: '100%',
-  },
-  postText: {
-    margin: 0,
-    maxWidth: '100%',
-  },
-  inputContainerWide: {
-    flexGrow: 1,
-  },
-  alwaysColumn: {
-    flexDirection: 'column',
-  },
-}))
