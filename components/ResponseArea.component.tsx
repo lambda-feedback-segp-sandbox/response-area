@@ -1,4 +1,3 @@
-import { useDeepMemo } from '@hooks/useDeepMemo'
 import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
@@ -6,6 +5,7 @@ import {
 import React from 'react'
 import { Stylable } from 'types/react'
 
+import { useDeepMemo } from '../hooks/useDeepMemo'
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
