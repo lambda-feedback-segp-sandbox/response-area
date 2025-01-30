@@ -1,8 +1,7 @@
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import FormHelperText from '@mui/material/FormHelperText'
 import { useCallback } from 'react'
-
-import { BaseResponseAreaProps } from '../base-props.type'
 
 import styles from './NumberInput.module.css'
 

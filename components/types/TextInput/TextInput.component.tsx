@@ -1,6 +1,5 @@
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { useCallback } from 'react'
-
-import { BaseResponseAreaProps } from '../base-props.type'
 
 import styles from './TextInput.module.css'
 

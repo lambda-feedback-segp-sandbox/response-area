@@ -1,11 +1,10 @@
 import { useDeepCompareEffect } from '@hooks/useDeepCompareEffect'
 import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import React, { useState } from 'react'
-
-import { BaseResponseAreaProps } from '../base-props.type'
 
 type GraphProps = Omit<BaseResponseAreaProps, 'handleChange' | 'answer'> & {
   answer?: string

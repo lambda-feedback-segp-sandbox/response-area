@@ -1,8 +1,7 @@
 import { ContentInput } from '@lambda-feedback-segp-sandbox/form-components'
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { useEffect, useState } from 'react'
-
-import { BaseResponseAreaProps } from '../base-props.type'
 
 type MilkdownInputProps = Omit<
   BaseResponseAreaProps,

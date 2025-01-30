@@ -1,4 +1,5 @@
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
+import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { RadioButtonChecked as CircleChecked } from '@mui/icons-material'
 import { RadioButtonUnchecked as CircleUnchecked } from '@mui/icons-material'
@@ -7,7 +8,6 @@ import { useState } from 'react'
 import * as ShuffleSeed from 'shuffle-seed'
 
 import { useDeepCompareEffect } from '../../../hooks/useDeepCompareEffect'
-import { BaseResponseAreaProps } from '../base-props.type'
 
 import { padAnswersFromOptions } from './helpers'
 

@@ -1,8 +1,8 @@
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
-} from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
+  ResponseAreaTub,
+} from '@lambda-feedback-segp-sandbox/response-area-base'
 
 import { NumberInput } from './NumberInput.component'
 import { numberResponseAnswerSchema } from './NumberInput.schema'

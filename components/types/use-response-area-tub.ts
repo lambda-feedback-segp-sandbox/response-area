@@ -1,8 +1,7 @@
+import { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { RefObject, useRef } from 'react'
 
 import usePrevious from '../../hooks/usePrevious'
-
-import { ResponseAreaTub } from './response-area-tub'
 
 import { createReponseAreaTub } from '.'
 

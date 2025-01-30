@@ -1,10 +1,9 @@
-import { z } from 'zod'
-
 import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
-} from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
+  ResponseAreaTub,
+} from '@lambda-feedback-segp-sandbox/response-area-base'
+import { z } from 'zod'
 
 import { NumericUnits } from './NumericUnits.component'
 

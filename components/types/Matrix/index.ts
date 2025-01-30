@@ -1,3 +1,8 @@
+import {
+  BaseResponseAreaProps,
+  BaseResponseAreaWizardProps,
+  ResponseAreaTub,
+} from '@lambda-feedback-segp-sandbox/response-area-base'
 import _ from 'lodash'
 import { z } from 'zod'
 
@@ -5,11 +10,6 @@ import {
   DEFAULT_COLS,
   DEFAULT_ROWS,
 } from '../../../schemas/question-form.schema'
-import {
-  BaseResponseAreaProps,
-  BaseResponseAreaWizardProps,
-} from '../base-props.type'
-import { ResponseAreaTub } from '../response-area-tub'
 
 import { padMatrixFromRowsAndCols } from './helpers'
 import { Matrix } from './Matrix.component'

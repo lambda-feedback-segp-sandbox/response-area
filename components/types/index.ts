@@ -1,3 +1,5 @@
+import { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
+
 import { CodeResponseAreaTub } from './Code'
 import { EssayResponseAreaTub } from './Essay'
 import { ExpressionResponseAreaTub } from './Expression'
@@ -7,7 +9,6 @@ import { MilkdownResponseAreaTub } from './Milkdown'
 import { MultipleChoiceResponseAreaTub } from './MultipleChoice'
 import { NumberResponseAreaTub } from './NumberInput'
 import { NumericUnitsResponseAreaTub } from './NumericUnits'
-import { ResponseAreaTub } from './response-area-tub'
 import { TableResponseAreaTub } from './Table'
 import { TextResponseAreaTub } from './TextInput'
 import { TrueFalseResponseAreaTub } from './TrueFalse'
