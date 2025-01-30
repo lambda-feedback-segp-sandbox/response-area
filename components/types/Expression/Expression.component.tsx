@@ -1,4 +1,3 @@
-import { useDeepCompareEffect } from '@hooks/useDeepCompareEffect'
 import { StandardSubmissionFragment } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql-sdk'
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
@@ -11,6 +10,7 @@ import Box from '@mui/system/Box'
 import useTheme from '@mui/system/useTheme'
 import React, { useCallback, useEffect, useState } from 'react'
 
+import { useDeepCompareEffect } from '../../../hooks/useDeepCompareEffect'
 import { ResponsePreviewFormParams } from '../../useResponsePreviewForm'
 
 import { Feedback } from './feedback'
