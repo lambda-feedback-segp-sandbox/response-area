@@ -10,7 +10,8 @@ import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import useTheme from '@mui/system/useTheme'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../../../types/react'
 
 export interface ExpressionDialogProps extends Stylable {
   title: string

@@ -5,8 +5,8 @@ import { Done as DoneIcon } from '@mui/icons-material'
 import { Undo as UndoIcon } from '@mui/icons-material'
 import Box from '@mui/system/Box'
 import React from 'react'
-import { Stylable } from 'types/react'
 
+import { Stylable } from '../../../../../types/react'
 import { CollapsableButton } from '../../CollapsableButton.component'
 
 interface ScanInlineButtonProps extends Stylable {

@@ -1,7 +1,8 @@
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import SvgIcon from '@mui/material/SvgIcon'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../../../../types/react'
 
 export const EraserIcon: React.FC<Stylable> = props => {
   const { className } = props

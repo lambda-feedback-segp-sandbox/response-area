@@ -20,11 +20,12 @@ import React, {
 } from 'react'
 import { useDropzone } from 'react-dropzone'
 import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
+
 import 'react-image-crop/dist/ReactCrop.css'
-import { Stylable } from 'types/react'
 
 import useDebounce from '../../../../../hooks/useDebounce'
 import { useViewPort } from '../../../../../hooks/useViewport'
+import { Stylable } from '../../../../../types/react'
 import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
 import {
   ResponsePreviewFormParams,

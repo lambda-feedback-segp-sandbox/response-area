@@ -6,8 +6,8 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
 import React, { memo, useEffect, useState } from 'react'
-import { Stylable } from 'types/react'
 
+import { Stylable } from '../../../../../types/react'
 import {
   ResponsePreviewFormParams,
   useResponsePreviewForm,

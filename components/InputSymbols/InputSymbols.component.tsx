@@ -1,7 +1,8 @@
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../types/react'
 
 export type InputSymbolForDisplay = {
   symbol: string

@@ -14,8 +14,8 @@ import {
   ReactSketchCanvas,
   ReactSketchCanvasRef,
 } from 'react-sketch-canvas'
-import { Stylable } from 'types/react'
 
+import { Stylable } from '../../../../../types/react'
 import { useGetEquationFromImage } from '../../../../useGetEquationFromImage'
 import {
   ResponsePreviewFormParams,

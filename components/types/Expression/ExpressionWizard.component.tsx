@@ -5,7 +5,8 @@ import FormGroup from '@mui/material/FormGroup'
 import FormLabel from '@mui/material/FormLabel'
 import Switch from '@mui/material/Switch'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../../types/react'
 
 interface ExpressionWizardProps extends Stylable {
   answer: string

@@ -4,7 +4,8 @@ import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import Alert, { AlertColor } from '@mui/material/Alert'
 import Typography from '@mui/material/Typography'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../types/react'
 
 interface ResponseAreaFeedbackProps extends Stylable {
   response: Pick<

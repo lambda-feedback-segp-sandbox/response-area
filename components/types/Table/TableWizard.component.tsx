@@ -3,8 +3,8 @@ import { BaseResponseAreaWizardProps } from '@lambda-feedback-segp-sandbox/respo
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import { noop } from 'lodash'
 import React from 'react'
-import { Stylable } from 'types/react'
 
+import { Stylable } from '../../../types/react'
 import { IMatrixResponse } from '../Matrix/helpers'
 
 import { Table } from './Table.component'

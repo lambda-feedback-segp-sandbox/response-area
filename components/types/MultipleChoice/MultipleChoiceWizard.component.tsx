@@ -7,7 +7,8 @@ import FormGroup from '@mui/material/FormGroup'
 import IconButton from '@mui/material/IconButton'
 import Switch from '@mui/material/Switch'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../../types/react'
 
 interface MultipleChoiceWizardProps extends Stylable {
   options: Array<string>

@@ -3,13 +3,14 @@ import {
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import React from 'react'
-import { Stylable } from 'types/react'
+
 
 import { useDeepMemo } from '../hooks/useDeepMemo'
 import {
   IModularResponseSchema,
   IResponseAreaSchema,
 } from '../schemas/question-form.schema'
+import { Stylable } from '../types/react'
 
 import { InputSymbolForDisplay } from './InputSymbols'
 import { ResponseAreaView } from './ResponseAreaView.component'

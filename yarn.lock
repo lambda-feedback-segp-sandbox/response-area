@@ -881,10 +881,10 @@
     "@mui/material" "^5.15.20"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/loading-components@0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/loading-components/0.1.0/4ba3437634bc9b1e287c28dcd35e6b587d92a346#4ba3437634bc9b1e287c28dcd35e6b587d92a346"
-  integrity sha512-7Z/jCfNd0hR/sL5QTkqK+xI1KW0TEFY4nrLuqooiDYJmyxgrGop/gEuZqs2CmyK4Ew5ZSRROxswuUHt7H6xLqw==
+"@lambda-feedback-segp-sandbox/loading-components@^0.1.0":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/loading-components/0.1.1/ca328fda2f228f8a1058929de93caacdf144c3aa#ca328fda2f228f8a1058929de93caacdf144c3aa"
+  integrity sha512-TPBQLLsWCYQyxEomGXZC2Z1mopQ3OlUhUTDh18lKl1n1+BXqMJ/kr0zioegZQPy8mTgWCC7yQaSzSjbZpaqlmg==
   dependencies:
     "@lambda-feedback-segp-sandbox/styles" "0.1.0"
     "@mui/material" "^5.15.20"

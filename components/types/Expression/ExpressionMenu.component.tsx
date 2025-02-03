@@ -9,7 +9,8 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/system/Box'
 import useTheme from '@mui/system/useTheme'
 import React from 'react'
-import { Stylable } from 'types/react'
+
+import { Stylable } from '../../../types/react'
 
 import { CollapsableButton } from './CollapsableButton.component'
 import { InputMode, isInputMode } from './modes'
