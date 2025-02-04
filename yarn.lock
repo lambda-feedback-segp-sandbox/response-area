@@ -809,6 +809,16 @@
     "@mui/material" "^5.15.20"
     react "^18.3.1"
 
+"@lambda-feedback-segp-sandbox/content-components@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/content-components/0.1.1/78a4b52defb6194dd995d45b0ea1528c7b95e2f1#78a4b52defb6194dd995d45b0ea1528c7b95e2f1"
+  integrity sha512-9Jn59BsRcIxcciiRy/dczZZsWej5XNCe4ghhJUVDJ3JEeVBSORgqerw+GGDZmOZ0AKVbGrCpPjfq1ybW67bWUA==
+  dependencies:
+    "@lambda-feedback-segp-sandbox/form-components" "^0.3.1"
+    "@lambda-feedback-segp-sandbox/styles" "^0.1.1"
+    "@mui/material" "^5.15.20"
+    react "^18.3.1"
+
 "@lambda-feedback-segp-sandbox/form-components@^0.2.1":
   version "0.2.1"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.2.1/8c4e92a0c2d9d0595b20fcc5531bd35175d473ea#8c4e92a0c2d9d0595b20fcc5531bd35175d473ea"
@@ -853,6 +863,44 @@
   dependencies:
     "@braintree/sanitize-url" "^7.0.4"
     "@lambda-feedback-segp-sandbox/content-components" "^0.1.0"
+    "@lambda-feedback-segp-sandbox/graphql-api" "^0.3.0"
+    "@lambda-feedback-segp-sandbox/styles" "^0.1.1"
+    "@milkdown/core" "^6.4.1"
+    "@milkdown/plugin-history" "^6.4.1"
+    "@milkdown/plugin-listener" "^6.4.1"
+    "@milkdown/plugin-math" "^6.4.1"
+    "@milkdown/plugin-menu" "^6.4.1"
+    "@milkdown/plugin-slash" "^6.4.3"
+    "@milkdown/plugin-tooltip" "^6.4.1"
+    "@milkdown/plugin-upload" "^6.4.1"
+    "@milkdown/preset-commonmark" "^6.4.2"
+    "@milkdown/preset-gfm" "^6.4.1"
+    "@milkdown/prose" "^6.4.1"
+    "@milkdown/react" "^6.4.1"
+    "@milkdown/theme-nord" "^6.4.1"
+    "@monaco-editor/react" "^4.6.0"
+    "@mui/icons-material" "^5.15.20"
+    "@mui/material" "^5.15.20"
+    "@mui/system" "^5.15.20"
+    axios "^1.7.2"
+    file-type "^16.5.3"
+    firebase "^11.0.1"
+    graphql-request "^4.3.0"
+    notistack "^2.0.3"
+    react "^18.3.1"
+    react-hook-form "^7.31.2"
+    react-input-autosize "^3.0.0"
+    react-json-view "^1.21.3"
+    react-query "^3.39.0"
+    zod "^3.14.4"
+
+"@lambda-feedback-segp-sandbox/form-components@^0.3.2":
+  version "0.3.2"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.3.2/7952bab95624e210f10e088cb282dba201665a85#7952bab95624e210f10e088cb282dba201665a85"
+  integrity sha512-MeKeDpptjhYqpcsMG6PrO+aAH53Fr6NatBfApqMW+7AfJM5nukidZNF687Db32hOuOh9We5J2raXkF0yqfIlcw==
+  dependencies:
+    "@braintree/sanitize-url" "^7.0.4"
+    "@lambda-feedback-segp-sandbox/content-components" "^0.1.1"
     "@lambda-feedback-segp-sandbox/graphql-api" "^0.3.0"
     "@lambda-feedback-segp-sandbox/styles" "^0.1.1"
     "@milkdown/core" "^6.4.1"

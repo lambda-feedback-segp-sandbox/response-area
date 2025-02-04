@@ -1,6 +1,6 @@
 {
   "name": "@lambda-feedback-segp-sandbox/response-area",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
@@ -9,8 +9,8 @@
     "test": "yarn test:types && yarn lint --max-warnings=0"
   },
   "dependencies": {
-    "@lambda-feedback-segp-sandbox/content-components": "^0.1.0",
-    "@lambda-feedback-segp-sandbox/form-components": "^0.3.1",
+    "@lambda-feedback-segp-sandbox/content-components": "^0.1.1",
+    "@lambda-feedback-segp-sandbox/form-components": "^0.3.2",
     "@lambda-feedback-segp-sandbox/graphql-api": "^0.3.0",
     "@lambda-feedback-segp-sandbox/icon-components": "^0.1.1",
     "@lambda-feedback-segp-sandbox/loading-components": "^0.1.1",
