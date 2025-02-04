@@ -1,4 +1,4 @@
-import { LabelledContent } from '@lambda-feedback-segp-sandbox/labelled-content'
+import { LabelledContent } from '@lambda-feedback-segp-sandbox/content-components'
 import { Text } from '@lambda-feedback-segp-sandbox/math-components'
 import { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
@@ -10,8 +10,6 @@ import React from 'react'
 
 import { IResponseAreaAnswerSchema } from '../schemas/question-form.schema'
 import { Stylable } from '../types/react'
-
-
 
 import { ResponseAreaFeedback } from './Feedback/ResponseAreaFeedback.component'
 import { InputSymbolForDisplay, InputSymbols } from './InputSymbols'
