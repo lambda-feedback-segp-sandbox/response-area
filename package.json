@@ -1,6 +1,6 @@
 {
   "name": "@lambda-feedback-segp-sandbox/response-area",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
@@ -30,6 +30,7 @@
     "react-query": "^3.39.0",
     "react-sketch-canvas": "^6.2.0",
     "shuffle-seed": "^1.1.6",
+    "typedoc": "^0.27.6",
     "zod": "^3.14.4"
   },
   "devDependencies": {

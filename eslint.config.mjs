@@ -11,7 +11,7 @@ import { fixupPluginRules } from '@eslint/compat'
 
 export default tseslint.config(
   {
-    ignores: ['.next/', '.yarn/', 'pages/_error.js', 'out/', 'public/'],
+    ignores: ['.next/', '.yarn/', 'pages/_error.js', 'out/', 'public/', 'docs/'],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
