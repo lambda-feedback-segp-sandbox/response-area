@@ -16,46 +16,124 @@ import { ResponseAreaView } from './ResponseAreaView.component'
 import { useResponseAreaTub } from './types/use-response-area-tub'
 import { PickedFeedback, useResponseAreaForm } from './useResponseAreaForm'
 
-export type ResponseAreaDisplayMode = 'normal' | 'peek'
+/**
+ * Defines the display mode for the response area.
+ *
+ * - `normal`: Displays the full response area.
+ * - `peek`: Shows a simplified preview of the response area.
+ */
+export type ResponseAreaDisplayMode = 'normal' | 'peek';
 
-interface ResponseAreaProps extends Stylable {
+/**
+ * Props for configuring a Response Area component.
+ *
+ * @interface ResponseAreaProps
+ * @extends Stylable
+ */
+export interface ResponseAreaProps extends Stylable {
+  /**
+   * The response area data, which can be one of the following:
+   * - `StandardResponseAreaFragment`
+   * - `StandardTeacherResponseAreaFragment`
+   * - `IResponseAreaSchema`
+   * 
+   * These types are used to define the structure of the response area and gotten depending on the user type.
+   *
+   * @type {StandardResponseAreaFragment | StandardTeacherResponseAreaFragment | IResponseAreaSchema}
+   */
   area:
     | StandardResponseAreaFragment
     | StandardTeacherResponseAreaFragment
-    | IResponseAreaSchema
+    | IResponseAreaSchema;
 
-  // used as a callback to update parents when the input is changed.
-  // Especially useful for Tests and Cases
+  /**
+   * Callback function triggered when the input value changes.
+   * Useful for updating the handleChange functions.
+   *
+   * @param {IModularResponseSchema['answer'] | undefined} answer - The updated answer.
+   * @param {Record<string, any> | undefined} additionalParams - Additional parameters related to the change.
+   * @returns {void}
+   */
   onChange?: (
     answer?: IModularResponseSchema['answer'],
-    additionalParams?: Record<string, any>,
-  ) => void
+    additionalParams?: Record<string, any>
+  ) => void;
 
-  // to set the initial value of the input. Used e.g. by the student side (to
-  // display the previous submission) or Tests and Cases (to display their
-  // current value)
-  inititialAnswer?: IModularResponseSchema['answer']
+  /**
+   * The initial answer value of the response area.
+   * Used to display previous submissions (e.g., in student views) or to pre-fill values.
+   *
+   * @type {IModularResponseSchema['answer'] | undefined}
+   */
+  inititialAnswer?: IModularResponseSchema['answer'];
 
-  // to set the initial value of the feedback. Used by the student side to display the previous submission)
-  inititialFeedback?: PickedFeedback
+  /**
+   * The initial feedback value associated with the response area.
+   * Used to display previous feedback submissions, primarily on the student side.
+   *
+   * @type {PickedFeedback | undefined}
+   */
+  inititialFeedback?: PickedFeedback;
 
-  // to hide the check button and disable submissions
-  hideCheck?: boolean
+  /**
+   * Whether to hide the check button, disabling submission functionality.
+   *
+   * @type {boolean | undefined}
+   */
+  hideCheck?: boolean;
 
-  // to hide the save button and disable draft save
-  hideSave?: boolean
+  /**
+   * Whether to hide the save button, disabling draft save functionality.
+   *
+   * @type {boolean | undefined}
+   */
+  hideSave?: boolean;
 
-  // to surround the RA with a labelled content box
-  wrapLabel?: string
+  /**
+   * Optional label used to wrap the response area in a labelled content box.
+   *
+   * @type {string | undefined}
+   */
+  wrapLabel?: string;
 
-  // action buttons display on the side  of the RA
-  ActionButtons?: React.ReactNode
+  /**
+   * Optional React nodes for action buttons, typically displayed on the side of the response area.
+   *
+   * @type {React.ReactNode | undefined}
+   */
+  ActionButtons?: React.ReactNode;
 
-  // choose to display the full response area ('normal', default) or just
-  // a simpler preview ('peek')
-  displayMode?: ResponseAreaDisplayMode
+  /**
+   * Defines the display mode of the response area.
+   * - `normal` (default): Displays the full response area.
+   * - `peek`: Shows a simpler preview version.
+   *
+   * @type {ResponseAreaDisplayMode | undefined}
+   */
+  displayMode?: ResponseAreaDisplayMode;
 }
 
+/**
+ * The `ResponseArea` component is the controller responsible for retrieving the relevant {@link useResponseAreaTub | response area tub} with various configurable options.
+ * It utilizes the {@link useResponseAreaForm} hook to manage the state and behavior of the response area props that get given to the view.
+ * The component memoizes its props using {@link useDeepMemo} to optimize performance.
+ * Depending on the type of response and display mode, which is gotten from a combination of the current user type and question selected, it initializes the response area tub accordingly.
+ * Finally, it renders the {@link ResponseAreaView} component with the appropriate props.
+ *
+ * @component
+ * @param {ResponseAreaProps} props - The properties used to configure the `ResponseArea` component.
+ * @param {StandardResponseAreaFragment | StandardTeacherResponseAreaFragment | IResponseAreaSchema} props.area - The response area data gotten depending on the user type.
+ * @param {(answer?: IModularResponseSchema['answer'], additionalParams?: Record<string, any>) => void} [props.onChange] - Callback function triggered when the input value changes. Useful for updating the handleChange functions.
+ * @param {IModularResponseSchema['answer']} [props.inititialAnswer] - The initial answer value of the response area.
+ * @param {PickedFeedback} [props.inititialFeedback] - The initial feedback value associated with the response area.
+ * @param {boolean} [props.hideCheck] - Whether to hide the check button.
+ * @param {boolean} [props.hideSave] - Whether to hide the save button.
+ * @param {string} [props.wrapLabel] - Optional label used to wrap the response area in a labelled content box.
+ * @param {React.ReactNode} [props.ActionButtons] - Optional React nodes for action buttons.
+ * @param {ResponseAreaDisplayMode} [props.displayMode] - Defines the display mode of the response area.
+ *
+ * @returns {JSX.Element | null} The rendered `ResponseAreaView` component or null if the tub reference is not available.
+ */
 export const ResponseArea: React.FC<ResponseAreaProps> = props => {
   const { area, onChange, inititialAnswer, inititialFeedback } = props
 

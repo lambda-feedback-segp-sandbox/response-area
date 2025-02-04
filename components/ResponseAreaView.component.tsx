@@ -15,39 +15,215 @@ import { ResponseAreaFeedback } from './Feedback/ResponseAreaFeedback.component'
 import { InputSymbolForDisplay, InputSymbols } from './InputSymbols'
 import { PickedFeedback } from './useResponseAreaForm'
 
-interface ResponseAreaViewProps extends Stylable {
-  ActionButtons?: React.ReactNode
+/**
+ * Props for the ResponseAreaView component.
+ *
+ * @interface ResponseAreaViewProps
+ * @extends Stylable
+ */
+export interface ResponseAreaViewProps extends Stylable {
+  /** 
+   * The action buttons to be displayed in the response area border (optional).
+   * 
+   * @type {React.ReactNode}
+   */
+  ActionButtons?: React.ReactNode;
 
-  tub: ResponseAreaTub
+  /** 
+   * The response area tub containing the input and wizard components to be rendered in the response area. 
+   * 
+   * @type {ResponseAreaTub}
+   */
+  tub: ResponseAreaTub;
 
-  responseAreaId?: string
-  universalResponseAreaId?: string
-  inputType: string
-  visibleSymbols: InputSymbolForDisplay[]
-  preResponseText?: string
-  postResponseText?: string
-  displayInputSymbols: boolean
-  showLivePreview: boolean
+  /** 
+   * ID of the response area which can be used in the tub (optional). 
+   * @see {@link ResponseAreaViewProps.tub}
+   * 
+   * @type {string | undefined}
+   */
+  responseAreaId?: string;
 
-  inputDisplayValue?: IResponseAreaAnswerSchema
+  /** 
+   * Universal ID of the response area which can be used in the tub (optional). 
+   * @see {@link ResponseAreaViewProps.tub} 
+   * @type {string | undefined}
+   */
+  universalResponseAreaId?: string;
+
+  /** 
+   * The type of the response area tub input component as a string. 
+   * Each new response area tub should have a unique input type.
+   * 
+   * @type {string}
+   */
+  inputType: string;
+
+  /** 
+   * Symbols visible in the input field. 
+   * 
+   * @type {InputSymbolForDisplay[]}
+   */
+  visibleSymbols: InputSymbolForDisplay[];
+
+  /** 
+   * Text displayed before the response input (optional). 
+   * 
+   * @type {string | undefined}
+   */
+  preResponseText?: string;
+
+  /** 
+   * Text displayed after the response input (optional). 
+   * 
+   * @type {string | undefined}
+   */
+  postResponseText?: string;
+
+  /** 
+   * Whether to display input symbols in response area input component. 
+   * 
+   * @type {boolean}
+   */
+  displayInputSymbols: boolean;
+
+  /** 
+   * Whether to show a live preview of the input in the response area input component. 
+   * 
+   * @type {boolean}
+   */
+  showLivePreview: boolean;
+
+  /** 
+   * The current input value of the response area (optional). 
+   * 
+   * @type {IResponseAreaAnswerSchema | undefined}
+   */
+  inputDisplayValue?: IResponseAreaAnswerSchema;
+
+  /** 
+   * Handles input change in the response area.
+   * 
+   * @param {IResponseAreaAnswerSchema | undefined} response - The updated response data.
+   * @param {Record<string, any> | undefined} additionalParams - Optional additional parameters.
+   * @returns {void}
+   */
   handleChange: (
     response?: IResponseAreaAnswerSchema,
-    additionalParams?: Record<string, any>,
-  ) => void
-  handleCheck: () => void
-  handleDraftSave: () => void
-  inFlight: boolean
-  feedback?: PickedFeedback
-  validationMessage?: string
-  requestError?: unknown
+    additionalParams?: Record<string, any>
+  ) => void;
 
-  displayMode?: 'normal' | 'peek'
-  isTeacherMode?: boolean
-  hideCheck?: boolean
-  hideSave?: boolean
-  wrapLabel?: string
+  /** 
+   * Function to handle input response validation in the response area component. 
+   * 
+   * @returns {void}
+   */
+  handleCheck: () => void;
+
+  /** 
+   * Function to handle saving a draft response. 
+   * 
+   * @returns {void}
+   */
+  handleDraftSave: () => void;
+
+  /** 
+   * Indicates if a response submission or save is in progress. 
+   * 
+   * @type {boolean}
+   */
+  inFlight: boolean;
+
+  /** 
+   * Feedback information from a submission (optional). 
+   * 
+   * @type {PickedFeedback | undefined}
+   */
+  feedback?: PickedFeedback;
+
+  /** 
+   * Validation message of submission, if any (optional). 
+   * 
+   * @type {string | undefined}
+   */
+  validationMessage?: string;
+
+  /** 
+   * Error encountered during a request (optional). 
+   * 
+   * @type {unknown}
+   */
+  requestError?: unknown;
+
+  /** 
+   * Display mode of the response area (default: 'normal'). 
+   * 
+   * @type {'normal' | 'peek' | undefined}
+   */
+  displayMode?: 'normal' | 'peek';
+
+  /** 
+   * Whether the response area is in teacher mode allowing for additional features in the input component being exposed (optional). 
+   * 
+   * @type {boolean | undefined}
+   */
+  isTeacherMode?: boolean;
+
+  /** 
+   * Whether to hide the check button (optional). 
+   * 
+   * @type {boolean | undefined}
+   */
+  hideCheck?: boolean;
+
+  /** 
+   * Whether to hide the save button (optional). 
+   * 
+   * @type {boolean | undefined}
+   */
+  hideSave?: boolean;
+
+  /** 
+   * Optional label wrapping setting around the response area. 
+   * 
+   * @type {string | undefined}
+   */
+  wrapLabel?: string;
 }
 
+
+/**
+ * The ResponseAreaView component renders a response area with various configurable options.
+ * It includes input components, pre and post response texts, validation messages, feedback, and action buttons.
+ * 
+ * @component
+ * @param {ResponseAreaViewProps} props - The properties used to render the ResponseAreaView component.
+ * @param {React.ReactNode} [props.ActionButtons] - Optional action buttons to be displayed in the response area.
+ * @param {ResponseAreaTub} props.tub - The response area tub containing the input and wizard components to be rendered in the response area.
+ * @param {string} [props.responseAreaId] - Optional ID for the response area component to use.
+ * @param {string} [props.universalResponseAreaId] - Optional universal ID for the response area to use.
+ * @param {string} props.inputType - The input type of the response area. Every response area tub should have a unique input type. This can be used by the response area tub. 
+ * @param {InputSymbolForDisplay[]} props.visibleSymbols - Symbols visible in the input area.
+ * @param {string} [props.preResponseText] - Optional text to display before the response area.
+ * @param {string} [props.postResponseText] - Optional text to display after the response area.
+ * @param {boolean} props.displayInputSymbols - Flag to display input symbols.
+ * @param {boolean} props.showLivePreview - Flag to determine when to show a live preview of the response (if defined).
+ * @param {IResponseAreaAnswerSchema} [props.inputDisplayValue] - Optional value to display in the input area.
+ * @param {(response?: IResponseAreaAnswerSchema, additionalParams?: Record<string, any>) => void} props.handleChange - Function to handle changes in the response area. Typically defines how the data is processed and sent to the evaluatiion function or server.
+ * @param {() => void} props.handleCheck - Function to handle the check action for the underlying response area input component's response. 
+ * @param {() => void} props.handleDraftSave - Function to handle saving a draft for the underlying response area input component's response.
+ * @param {boolean} props.inFlight - Flag indicating if a request is in progress. This can be used to show a loading spinner in the response area.
+ * @param {PickedFeedback} [props.feedback] - Optional feedback for the response.
+ * @param {string} [props.validationMessage] - Optional validation message.
+ * @param {unknown} [props.requestError] - Optional error from a request.
+ * @param {'normal' | 'peek'} [props.displayMode] - Optional display mode for the response area, either 'normal' or 'peek'.
+ * @param {boolean} [props.isTeacherMode] - Optional flag indicating if the component is in teacher mode. Typically used to expose additional features in the input component.
+ * @param {boolean} [props.hideCheck] - Optional flag to hide the check button.
+ * @param {boolean} [props.hideSave] - Optional flag to hide the save button.
+ * @param {string} [props.wrapLabel] - Optional label for wrapping the response area with a label and border. 
+ * 
+ * @returns {JSX.Element} The rendered ResponseAreaView component.
+ */
 export const ResponseAreaView: React.FC<ResponseAreaViewProps> = props => {
   const { classes, cx } = useStyles()
 
@@ -77,6 +253,15 @@ export const ResponseAreaView: React.FC<ResponseAreaViewProps> = props => {
     wrapLabel,
   } = props
 
+
+  /**
+   * Wrapper component that conditionally applies a label if `wrapLabel` is provided.
+   *
+   * @component
+   * @param {Object} props - The props for the wrapper.
+   * @param {React.ReactNode} props.children - The child elements to be wrapped.
+   * @returns {JSX.Element} The wrapped content.
+   */
   const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return wrapLabel ? (
       <LabelledContent label={wrapLabel!} className={classes.labelledContent}>
