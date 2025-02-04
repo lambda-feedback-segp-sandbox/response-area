@@ -34,7 +34,7 @@ type AnswerAndParams = {
 
 export type PickedFeedback = Pick<
   StandardSubmissionFragment,
-  'isCorrect' | 'isError' | 'feedback' | 'matchedCase'
+  'isCorrect' | 'isError' | 'feedback' | 'matchedCase' | 'color'
 > | null
 
 export type PickedDraftFeedback = Pick<
