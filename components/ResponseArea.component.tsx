@@ -2,6 +2,7 @@ import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { initialiseTub } from '@lambda-feedback-segp-sandbox/response-area-base'
 import React from 'react'
 
 import { useDeepMemo } from '../hooks/useDeepMemo'
@@ -22,7 +23,7 @@ import { PickedFeedback, useResponseAreaForm } from './useResponseAreaForm'
  * - `normal`: Displays the full response area.
  * - `peek`: Shows a simplified preview of the response area.
  */
-export type ResponseAreaDisplayMode = 'normal' | 'peek';
+export type ResponseAreaDisplayMode = 'normal' | 'peek'
 
 /**
  * Props for configuring a Response Area component.
@@ -36,7 +37,7 @@ export interface ResponseAreaProps extends Stylable {
    * - `StandardResponseAreaFragment`
    * - `StandardTeacherResponseAreaFragment`
    * - `IResponseAreaSchema`
-   * 
+   *
    * These types are used to define the structure of the response area and gotten depending on the user type.
    *
    * @type {StandardResponseAreaFragment | StandardTeacherResponseAreaFragment | IResponseAreaSchema}
@@ -44,7 +45,7 @@ export interface ResponseAreaProps extends Stylable {
   area:
     | StandardResponseAreaFragment
     | StandardTeacherResponseAreaFragment
-    | IResponseAreaSchema;
+    | IResponseAreaSchema
 
   /**
    * Callback function triggered when the input value changes.
@@ -56,8 +57,8 @@ export interface ResponseAreaProps extends Stylable {
    */
   onChange?: (
     answer?: IModularResponseSchema['answer'],
-    additionalParams?: Record<string, any>
-  ) => void;
+    additionalParams?: Record<string, any>,
+  ) => void
 
   /**
    * The initial answer value of the response area.
@@ -65,7 +66,7 @@ export interface ResponseAreaProps extends Stylable {
    *
    * @type {IModularResponseSchema['answer'] | undefined}
    */
-  inititialAnswer?: IModularResponseSchema['answer'];
+  inititialAnswer?: IModularResponseSchema['answer']
 
   /**
    * The initial feedback value associated with the response area.
@@ -73,35 +74,35 @@ export interface ResponseAreaProps extends Stylable {
    *
    * @type {PickedFeedback | undefined}
    */
-  inititialFeedback?: PickedFeedback;
+  inititialFeedback?: PickedFeedback
 
   /**
    * Whether to hide the check button, disabling submission functionality.
    *
    * @type {boolean | undefined}
    */
-  hideCheck?: boolean;
+  hideCheck?: boolean
 
   /**
    * Whether to hide the save button, disabling draft save functionality.
    *
    * @type {boolean | undefined}
    */
-  hideSave?: boolean;
+  hideSave?: boolean
 
   /**
    * Optional label used to wrap the response area in a labelled content box.
    *
    * @type {string | undefined}
    */
-  wrapLabel?: string;
+  wrapLabel?: string
 
   /**
    * Optional React nodes for action buttons, typically displayed on the side of the response area.
    *
    * @type {React.ReactNode | undefined}
    */
-  ActionButtons?: React.ReactNode;
+  ActionButtons?: React.ReactNode
 
   /**
    * Defines the display mode of the response area.
@@ -110,7 +111,7 @@ export interface ResponseAreaProps extends Stylable {
    *
    * @type {ResponseAreaDisplayMode | undefined}
    */
-  displayMode?: ResponseAreaDisplayMode;
+  displayMode?: ResponseAreaDisplayMode
 }
 
 /**
@@ -213,21 +214,11 @@ export const ResponseArea: React.FC<ResponseAreaProps> = props => {
 
   if (!tubRef.current) return null
 
-  if (!area.response || displayMode === 'peek') {
-    tubRef.current.initWithDefault()
-  } else if (
-    '__typename' in area.response &&
-    area.response.__typename === 'TeacherModularResponse'
-  ) {
-    tubRef.current.initWithTeacherFragment(area.response)
-  } else if (
-    '__typename' in area.response &&
-    area.response.__typename === 'StudentModularResponse'
-  ) {
-    tubRef.current.initWithStudentFragment(area.response)
-  } else {
-    tubRef.current.initWithResponse(area.response)
-  }
+  initialiseTub(
+    tubRef.current,
+    area.response ?? undefined,
+    displayMode ?? 'normal',
+  )
 
   return <ResponseAreaView tub={tubRef.current} {...viewProps} />
 }

@@ -895,10 +895,10 @@
     markdown-to-jsx "^7.1.7"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/response-area-base@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/1.0.0/08b6bc182cf1d7d84d3e22b3c2d498cdaa9ab0a2#08b6bc182cf1d7d84d3e22b3c2d498cdaa9ab0a2"
-  integrity sha512-V5VfuLNe2Fp0JRdcszUJDrH4dKVBh2gStiTo9OiszXWUhUCJQnY6YiGbrXfDENTlH4/DB607J3AK/naSVF6pZA==
+"@lambda-feedback-segp-sandbox/response-area-base@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/1.1.0/19ac6461b99e63e03e2945adf131259f7ffe7148#19ac6461b99e63e03e2945adf131259f7ffe7148"
+  integrity sha512-rx29GGzEE0zNf/x3BI3zXPMPntQ019HrQsqnuxHs69paNTrZT7gahoeQTQuwOC3PutBkzSIo5NbZEBHM7WFf5Q==
   dependencies:
     "@lambda-feedback-segp-sandbox/graphql-api" "^1.0.0"
     react "^18.3.1"
