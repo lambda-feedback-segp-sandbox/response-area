@@ -2,6 +2,7 @@ import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { initialiseTub } from '@lambda-feedback-segp-sandbox/response-area-base'
 import React from 'react'
 
 import { useDeepMemo } from '../hooks/useDeepMemo'
@@ -213,21 +214,11 @@ export const ResponseArea: React.FC<ResponseAreaProps> = props => {
 
   if (!tubRef.current) return null
 
-  if (!area.response || displayMode === 'peek') {
-    tubRef.current.initWithDefault()
-  } else if (
-    '__typename' in area.response &&
-    area.response.__typename === 'TeacherModularResponse'
-  ) {
-    tubRef.current.initWithTeacherFragment(area.response)
-  } else if (
-    '__typename' in area.response &&
-    area.response.__typename === 'StudentModularResponse'
-  ) {
-    tubRef.current.initWithStudentFragment(area.response)
-  } else {
-    tubRef.current.initWithResponse(area.response)
-  }
+  initialiseTub(
+    tubRef.current,
+    area.response ?? undefined,
+    displayMode ?? 'normal',
+  )
 
   return <ResponseAreaView tub={tubRef.current} {...viewProps} />
 }
