@@ -4,7 +4,6 @@ import {
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import React from 'react'
 
-
 import { useDeepMemo } from '../hooks/useDeepMemo'
 import {
   IModularResponseSchema,

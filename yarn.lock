@@ -790,14 +790,62 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lambda-feedback-segp-sandbox/form-components@^0.2.0":
-  version "0.2.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.2.0/2dd5db142e859f38c44e0d5d282086bec9e57b73#2dd5db142e859f38c44e0d5d282086bec9e57b73"
-  integrity sha512-KHWk5icBA4Py3Wcc5ZzScKlDkO9pzbtz8FuOe3uWS4XFsF0cPXEqpTpt3An7jwBoFvfGMNFIlQvjlOdaMxEOug==
+"@lambda-feedback-segp-sandbox/content-components@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/content-components/0.1.0/850045773734b1230025194baff8e6e713e6d5fc#850045773734b1230025194baff8e6e713e6d5fc"
+  integrity sha512-l6HeHhY6Pj6JoIKUndmUbEJt4Y5I378IWCGu0Gqk+O+4XMGIs3mZxyIQvuGx9qlRhJDMLioxkYsrTW0QVwWodw==
+  dependencies:
+    "@lambda-feedback-segp-sandbox/form-components" "^0.2.1"
+    "@lambda-feedback-segp-sandbox/styles" "^0.1.1"
+    "@mui/material" "^5.15.20"
+    react "^18.3.1"
+
+"@lambda-feedback-segp-sandbox/form-components@^0.2.1":
+  version "0.2.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.2.1/8c4e92a0c2d9d0595b20fcc5531bd35175d473ea#8c4e92a0c2d9d0595b20fcc5531bd35175d473ea"
+  integrity sha512-c+JxmLGK7yGFn9ApmG7Qdh0WacUGTGxtNK3u6zLJupRXFxjhhVIONgGcGIJny8+dNy3loAUF6xkaL079ZDbRCA==
   dependencies:
     "@braintree/sanitize-url" "^7.0.4"
     "@lambda-feedback-segp-sandbox/graphql-api" "0.2.0"
     "@lambda-feedback-segp-sandbox/styles" "0.1.0"
+    "@milkdown/core" "^6.4.1"
+    "@milkdown/plugin-history" "^6.4.1"
+    "@milkdown/plugin-listener" "^6.4.1"
+    "@milkdown/plugin-math" "^6.4.1"
+    "@milkdown/plugin-menu" "^6.4.1"
+    "@milkdown/plugin-slash" "^6.4.3"
+    "@milkdown/plugin-tooltip" "^6.4.1"
+    "@milkdown/plugin-upload" "^6.4.1"
+    "@milkdown/preset-commonmark" "^6.4.2"
+    "@milkdown/preset-gfm" "^6.4.1"
+    "@milkdown/prose" "^6.4.1"
+    "@milkdown/react" "^6.4.1"
+    "@milkdown/theme-nord" "^6.4.1"
+    "@monaco-editor/react" "^4.6.0"
+    "@mui/icons-material" "^5.15.20"
+    "@mui/material" "^5.15.20"
+    "@mui/system" "^5.15.20"
+    axios "^1.7.2"
+    file-type "^16.5.3"
+    firebase "^11.0.1"
+    graphql-request "^4.3.0"
+    notistack "^2.0.3"
+    react "^18.3.1"
+    react-hook-form "^7.31.2"
+    react-input-autosize "^3.0.0"
+    react-json-view "^1.21.3"
+    react-query "^3.39.0"
+    zod "^3.14.4"
+
+"@lambda-feedback-segp-sandbox/form-components@^0.3.1":
+  version "0.3.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/0.3.1/af18e64c14e12141383341660b3f679d2f6cdff0#af18e64c14e12141383341660b3f679d2f6cdff0"
+  integrity sha512-Xkye3E344Lrt6JVdBpyEQkOZiQg013jfO2syn6cLFTQn2OYvLtKI+lvIhOdVkOeYSLCoTaizkobjoaPXltXuBA==
+  dependencies:
+    "@braintree/sanitize-url" "^7.0.4"
+    "@lambda-feedback-segp-sandbox/content-components" "^0.1.0"
+    "@lambda-feedback-segp-sandbox/graphql-api" "^0.3.0"
+    "@lambda-feedback-segp-sandbox/styles" "^0.1.1"
     "@milkdown/core" "^6.4.1"
     "@milkdown/plugin-history" "^6.4.1"
     "@milkdown/plugin-listener" "^6.4.1"
@@ -861,27 +909,17 @@
     react-query "^3.39.0"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/icon-components@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/icon-components/0.1.0/8430c06a21d1c8bf05d663994e9106e62b306745#8430c06a21d1c8bf05d663994e9106e62b306745"
-  integrity sha512-kAA89s5z862uawonQnEB2ZtebBYuh4CVMznDxxSH/j9Eo6Qa30aC97IZQqF89SZ5XV0o3Tu+n+SZOb+2jeg8+A==
+"@lambda-feedback-segp-sandbox/icon-components@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/icon-components/0.1.1/dfed0ae193c12e58a442fcc179d65cc80b7dcda4#dfed0ae193c12e58a442fcc179d65cc80b7dcda4"
+  integrity sha512-niHqQm07SD17sNQu1yNYY83OVrSnbAmLTcoatm/e9fEvEtcn+zNNu7OLm4uFLlLOyC1znVZdPxymfmbDV6WA1Q==
   dependencies:
     "@lambda-feedback-segp-sandbox/styles" "0.1.0"
     "@mui/material" "^5.15.20"
     next "^14.2.4"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/labelled-content@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/labelled-content/0.1.0/c8a1425e5ff867a8c28e1e41bb4a0d86549f2a9e#c8a1425e5ff867a8c28e1e41bb4a0d86549f2a9e"
-  integrity sha512-o+DCcD69zaZgcgCdSEjFLrFq/K03CVSsa1Tf1dRqiaQewmbxiL6//B2rPkzsDEnd9W8FziYdY7ZPSuG4ik6FBQ==
-  dependencies:
-    "@lambda-feedback-segp-sandbox/form-components" "^0.2.0"
-    "@lambda-feedback-segp-sandbox/styles" "^0.1.0"
-    "@mui/material" "^5.15.20"
-    react "^18.3.1"
-
-"@lambda-feedback-segp-sandbox/loading-components@^0.1.0":
+"@lambda-feedback-segp-sandbox/loading-components@^0.1.1":
   version "0.1.1"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/loading-components/0.1.1/ca328fda2f228f8a1058929de93caacdf144c3aa#ca328fda2f228f8a1058929de93caacdf144c3aa"
   integrity sha512-TPBQLLsWCYQyxEomGXZC2Z1mopQ3OlUhUTDh18lKl1n1+BXqMJ/kr0zioegZQPy8mTgWCC7yQaSzSjbZpaqlmg==
@@ -890,10 +928,10 @@
     "@mui/material" "^5.15.20"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/math-components@^0.2.0":
-  version "0.2.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/math-components/0.2.0/aa535a1c8e4595d5103ee3947a159bf3f9cf9cb7#aa535a1c8e4595d5103ee3947a159bf3f9cf9cb7"
-  integrity sha512-doOsKnMG+UMwVCKFZwK7IVJQwfBLaS11wPw7ZQOUrsXirCAVW4yfzdrDHlasMEvjlqMmsjB42NiT/9LrVIXYSQ==
+"@lambda-feedback-segp-sandbox/math-components@^0.3.0":
+  version "0.3.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/math-components/0.3.0/40eb6b7226e9d5574386ede26354214fc4fa3696#40eb6b7226e9d5574386ede26354214fc4fa3696"
+  integrity sha512-jv24B5MqqNybOLSiLiQOvSZE/jVqTx3sCsZ2XuywsyptQhcFngiewgYU+ALD9SqBCq3wXjq1egwejMmFNXCXrg==
   dependencies:
     "@lambda-feedback-segp-sandbox/styles" "0.1.0"
     "@mui/system" "^5.15.20"
@@ -902,20 +940,43 @@
     markdown-to-jsx "^7.1.7"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/response-area-base@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/0.1.0/70c7383915c2caea59442469920ee7b63ce58d93#70c7383915c2caea59442469920ee7b63ce58d93"
-  integrity sha512-Z5jYclmIHhnEFOE2ZC7gnJJzGcKvyaq/WUPIkcEh5Ul7n3PxcxgwSaOFJCitahbxqtgvFVccfv9rSzBs+pM7cA==
+"@lambda-feedback-segp-sandbox/response-area-base@^0.1.2":
+  version "0.1.2"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/0.1.2/f31312ca23db09b4dfc6ce76a227a251bc551260#f31312ca23db09b4dfc6ce76a227a251bc551260"
+  integrity sha512-zjsiElLlBzMGnDefmf6HdUcZSxaS1L1l7mfVO4rXxZR4AJuNnnOKZbIQD1fnnOWthr/GQzcJjk66BSsBgtNdRQ==
   dependencies:
     "@lambda-feedback-segp-sandbox/graphql-api" "0.3.0"
     react "^18.3.1"
     react-query "^3.39.0"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/styles@0.1.0", "@lambda-feedback-segp-sandbox/styles@^0.1.0":
+"@lambda-feedback-segp-sandbox/styles@0.1.0":
   version "0.1.0"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/styles/0.1.0/f0ae59616b3a42a5ecdec40a2d82a0d53a4f298a#f0ae59616b3a42a5ecdec40a2d82a0d53a4f298a"
   integrity sha512-muweWsuzTOLhz9j1pGuKU1cEBp/vmoHa91f64ORf0qtyEnSAErJxtayuFfqXL+ya/hAmUYT/7mBxVBzd+H7I9w==
+  dependencies:
+    "@emotion/react" "^11.4.1"
+    "@emotion/server" "^11.4.0"
+    "@emotion/styled" "^11.3.0"
+    "@mui/lab" "^5.0.0-alpha.100"
+    "@mui/material" "^5.15.20"
+    "@mui/material-nextjs" "^5.15.11"
+    "@mui/system" "^5.15.20"
+    "@mui/x-data-grid" "^7.7.0"
+    "@mui/x-date-pickers" "^7.7.0"
+    date-fns "^2.28.0"
+    eslint-plugin-import "^2.31.0"
+    framer-motion "^11.2.10"
+    luxon "^3.4.3"
+    next "^14.2.4"
+    react "^18.3.1"
+    react-dom "^18.3.1"
+    tss-react "^3.7.0"
+
+"@lambda-feedback-segp-sandbox/styles@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/styles/0.1.1/acf8724be1c53dc3e0d3e4a6ea65abf00364e434#acf8724be1c53dc3e0d3e4a6ea65abf00364e434"
+  integrity sha512-hwFffk8UCiHk4GvCup3pepa1/INwMepp/oMRXbSzrrBnmcfSWN5f8rFiB6KnBOk+yJpjMThKUvERiSkiTCuYHA==
   dependencies:
     "@emotion/react" "^11.4.1"
     "@emotion/server" "^11.4.0"
