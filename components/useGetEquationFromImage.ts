@@ -1,4 +1,4 @@
-import { useGetEquationFromImageMutation } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { useGetEquationFromImageMutation } from '@lambda-feedback/graphql-api/api/graphql'
 import { useCallback } from 'react'
 
 export const useGetEquationFromImage = () => {

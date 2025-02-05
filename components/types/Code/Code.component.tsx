@@ -1,6 +1,6 @@
-import { Loading } from '@lambda-feedback-segp-sandbox/loading-components'
-import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { Loading } from '@lambda-feedback/loading-components'
+import { BaseResponseAreaProps } from '@lambda-feedback/response-area-base'
+import { makeStyles } from '@lambda-feedback/styles'
 import Editor from '@monaco-editor/react'
 
 import { CodeConfigSchema } from '.'

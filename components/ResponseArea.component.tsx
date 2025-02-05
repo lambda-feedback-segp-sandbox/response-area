@@ -1,8 +1,8 @@
 import {
   StandardResponseAreaFragment,
   StandardTeacherResponseAreaFragment,
-} from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { initialiseTub } from '@lambda-feedback-segp-sandbox/response-area-base'
+} from '@lambda-feedback/graphql-api/api/graphql'
+import { initialiseTub } from '@lambda-feedback/response-area-base'
 import React from 'react'
 
 import { useDeepMemo } from '../hooks/useDeepMemo'

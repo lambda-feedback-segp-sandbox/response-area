@@ -1,4 +1,4 @@
-import { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
+import { ResponseAreaTub } from '@lambda-feedback/response-area-base'
 
 import { CodeResponseAreaTub } from './Code'
 import { EssayResponseAreaTub } from './Essay'

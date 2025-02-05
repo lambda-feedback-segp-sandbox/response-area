@@ -1,4 +1,4 @@
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { makeStyles } from '@lambda-feedback/styles'
 import Toolbar from '@mui/material/Toolbar'
 import React from 'react'
 

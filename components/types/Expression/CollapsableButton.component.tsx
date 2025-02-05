@@ -1,4 +1,4 @@
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { makeStyles } from '@lambda-feedback/styles'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import useMediaQuery from '@mui/material/useMediaQuery'

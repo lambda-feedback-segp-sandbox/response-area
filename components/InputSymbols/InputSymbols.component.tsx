@@ -1,5 +1,5 @@
-import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { Text } from '@lambda-feedback/math-components'
+import { makeStyles } from '@lambda-feedback/styles'
 import React from 'react'
 
 import { Stylable } from '../../types/react'

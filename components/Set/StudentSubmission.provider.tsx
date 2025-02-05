@@ -2,7 +2,7 @@ import {
   useGetSetQuery,
   useSubmitResponseMutation,
   useStudentUpsertSubmissionDraftMutation,
-} from '@lambda-feedback-segp-sandbox/graphql-api'
+} from '@lambda-feedback/graphql-api'
 import _ from 'lodash'
 import { useQueryClient } from 'react-query'
 

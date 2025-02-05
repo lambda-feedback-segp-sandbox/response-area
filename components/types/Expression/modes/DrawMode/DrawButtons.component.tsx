@@ -1,4 +1,4 @@
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { makeStyles } from '@lambda-feedback/styles'
 import { Delete as DeleteIcon } from '@mui/icons-material'
 import { Draw as DrawIcon } from '@mui/icons-material'
 import { Redo as RedoIcon } from '@mui/icons-material'

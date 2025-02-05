@@ -3,7 +3,7 @@ import {
   StandardSubmissionFragment,
   StandardSubmissionDraftFragment,
   StandardTeacherResponseAreaFragment,
-} from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+} from '@lambda-feedback/graphql-api/api/graphql'
 import { useCallback, useState } from 'react'
 
 import {

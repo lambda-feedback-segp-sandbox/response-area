@@ -1,8 +1,8 @@
-import { StandardSubmissionFragment } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql-sdk'
-import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
-import { Text } from '@lambda-feedback-segp-sandbox/math-components'
-import { Math } from '@lambda-feedback-segp-sandbox/math-components'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { StandardSubmissionFragment } from '@lambda-feedback/graphql-api/api/graphql-sdk'
+import { PreviewFeedback } from '@lambda-feedback/graphql-api/api/requests/preview'
+import { Text } from '@lambda-feedback/math-components'
+import { Math } from '@lambda-feedback/math-components'
+import { makeStyles } from '@lambda-feedback/styles'
 import {
   Cancel as CancelIcon,
   CheckCircle as CheckCircleIcon,

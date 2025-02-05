@@ -1,5 +1,5 @@
-import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { BaseResponseAreaProps } from '@lambda-feedback/response-area-base'
+import { makeStyles } from '@lambda-feedback/styles'
 import _ from 'lodash'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 

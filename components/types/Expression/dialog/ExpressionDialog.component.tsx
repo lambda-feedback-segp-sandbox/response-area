@@ -1,4 +1,4 @@
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { makeStyles } from '@lambda-feedback/styles'
 import { Close as CloseIcon } from '@mui/icons-material'
 import { Done as DoneIcon } from '@mui/icons-material'
 import AppBar from '@mui/material/AppBar'

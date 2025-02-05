@@ -1,4 +1,4 @@
-import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
+import { BaseResponseAreaProps } from '@lambda-feedback/response-area-base'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import styles from './NumericUnits.module.css'

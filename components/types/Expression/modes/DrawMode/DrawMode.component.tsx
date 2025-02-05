@@ -1,5 +1,5 @@
-import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { PreviewFeedback } from '@lambda-feedback/graphql-api/api/requests/preview'
+import { makeStyles } from '@lambda-feedback/styles'
 import {
   Done as DoneIcon,
   OpenInFull as OpenInFullIcon,

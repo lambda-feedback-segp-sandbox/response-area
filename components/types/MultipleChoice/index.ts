@@ -2,7 +2,7 @@ import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
   ResponseAreaTub,
-} from '@lambda-feedback-segp-sandbox/response-area-base'
+} from '@lambda-feedback/response-area-base'
 
 import { padAnswersFromOptions } from './helpers'
 import { MultipleChoice } from './MultipleChoice.component'

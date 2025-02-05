@@ -1,6 +1,6 @@
 {
-  "name": "@lambda-feedback-segp-sandbox/response-area",
-  "version": "1.3.1",
+  "name": "@lambda-feedback/response-area",
+  "version": "1.0.0",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
@@ -9,14 +9,14 @@
     "test": "yarn test:types && yarn lint --max-warnings=0"
   },
   "dependencies": {
-    "@lambda-feedback-segp-sandbox/content-components": "^1.0.1",
-    "@lambda-feedback-segp-sandbox/form-components": "^1.0.2",
-    "@lambda-feedback-segp-sandbox/graphql-api": "^1.0.0",
-    "@lambda-feedback-segp-sandbox/icon-components": "^1.0.0",
-    "@lambda-feedback-segp-sandbox/loading-components": "^1.0.0",
-    "@lambda-feedback-segp-sandbox/math-components": "^1.0.0",
-    "@lambda-feedback-segp-sandbox/response-area-base": "^1.1.0",
-    "@lambda-feedback-segp-sandbox/styles": "^1.0.0",
+    "@lambda-feedback/content-components": "^1.0.0",
+    "@lambda-feedback/form-components": "^1.0.0",
+    "@lambda-feedback/graphql-api": "^1.0.0",
+    "@lambda-feedback/icon-components": "^1.0.0",
+    "@lambda-feedback/loading-components": "^1.0.0",
+    "@lambda-feedback/math-components": "^1.0.0",
+    "@lambda-feedback/response-area-base": "^1.0.0",
+    "@lambda-feedback/styles": "^1.0.0",
     "@monaco-editor/react": "^4.6.0",
     "@mui/lab": "^5.0.0-alpha.100",
     "@mui/material": "^5.15.20",

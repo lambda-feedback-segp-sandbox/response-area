@@ -1,4 +1,4 @@
-import { processPreviewResult } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
+import { processPreviewResult } from '@lambda-feedback/graphql-api/api/requests/preview'
 import { useCallback, useMemo } from 'react'
 
 import { useResponsePreviewSubmission } from './useResponsePreviewSubmission'

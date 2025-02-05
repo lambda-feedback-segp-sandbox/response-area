@@ -2,7 +2,7 @@ import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
   ResponseAreaTub,
-} from '@lambda-feedback-segp-sandbox/response-area-base'
+} from '@lambda-feedback/response-area-base'
 import _ from 'lodash'
 import { z } from 'zod'
 

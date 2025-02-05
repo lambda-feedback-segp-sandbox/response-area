@@ -1,4 +1,4 @@
-import { useTeacherSubmitTestMutation } from '@lambda-feedback-segp-sandbox/graphql-api'
+import { useTeacherSubmitTestMutation } from '@lambda-feedback/graphql-api'
 import { useCallback } from 'react'
 
 import { getJsonOrEmptyObj } from '../../utils/json'

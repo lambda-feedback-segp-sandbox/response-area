@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { PreviewFeedback } from '@lambda-feedback/graphql-api/api/requests/preview'
+import { makeStyles } from '@lambda-feedback/styles'
 import { OpenInFull as OpenInFullIcon } from '@mui/icons-material'
 import { Done as DoneIcon } from '@mui/icons-material'
 import Button from '@mui/material/Button'

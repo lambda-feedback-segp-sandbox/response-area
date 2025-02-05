@@ -1,5 +1,5 @@
-import { TextInput } from '@lambda-feedback-segp-sandbox/form-components'
-import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
+import { TextInput } from '@lambda-feedback/form-components'
+import { makeStyles } from '@lambda-feedback/styles'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormGroup from '@mui/material/FormGroup'
 import FormLabel from '@mui/material/FormLabel'

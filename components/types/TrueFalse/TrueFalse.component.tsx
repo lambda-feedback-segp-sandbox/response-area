@@ -1,4 +1,4 @@
-import { BaseResponseAreaProps } from '@lambda-feedback-segp-sandbox/response-area-base'
+import { BaseResponseAreaProps } from '@lambda-feedback/response-area-base'
 
 import styles from './TrueFalse.module.css'
 
