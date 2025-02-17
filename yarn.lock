@@ -809,10 +809,48 @@
     "@mui/material" "^5.15.20"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/form-components@^1.0.0", "@lambda-feedback-segp-sandbox/form-components@^1.0.2":
+"@lambda-feedback-segp-sandbox/form-components@^1.0.0":
   version "1.0.2"
   resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/1.0.2/5a3f843db3de29dee511323ad0216e6eced93e52#5a3f843db3de29dee511323ad0216e6eced93e52"
   integrity sha512-gXS+b7F+VErIDwpZHPFFa8m3UdPMuzNKQdYOL0BoXIKwUW3OoqVsRoMPTp3oOHAcIyqjYryJIGS6TL0u2UkNXg==
+  dependencies:
+    "@braintree/sanitize-url" "^7.0.4"
+    "@lambda-feedback-segp-sandbox/content-components" "^1.0.0"
+    "@lambda-feedback-segp-sandbox/graphql-api" "^1.0.0"
+    "@lambda-feedback-segp-sandbox/styles" "^1.0.0"
+    "@milkdown/core" "^6.4.1"
+    "@milkdown/plugin-history" "^6.4.1"
+    "@milkdown/plugin-listener" "^6.4.1"
+    "@milkdown/plugin-math" "^6.4.1"
+    "@milkdown/plugin-menu" "^6.4.1"
+    "@milkdown/plugin-slash" "^6.4.3"
+    "@milkdown/plugin-tooltip" "^6.4.1"
+    "@milkdown/plugin-upload" "^6.4.1"
+    "@milkdown/preset-commonmark" "^6.4.2"
+    "@milkdown/preset-gfm" "^6.4.1"
+    "@milkdown/prose" "^6.4.1"
+    "@milkdown/react" "^6.4.1"
+    "@milkdown/theme-nord" "^6.4.1"
+    "@monaco-editor/react" "^4.6.0"
+    "@mui/icons-material" "^5.15.20"
+    "@mui/material" "^5.15.20"
+    "@mui/system" "^5.15.20"
+    axios "^1.7.2"
+    file-type "^16.5.3"
+    firebase "^11.0.1"
+    graphql-request "^4.3.0"
+    notistack "^2.0.3"
+    react "^18.3.1"
+    react-hook-form "^7.31.2"
+    react-input-autosize "^3.0.0"
+    react-json-view "^1.21.3"
+    react-query "^3.39.0"
+    zod "^3.14.4"
+
+"@lambda-feedback-segp-sandbox/form-components@^1.1.1":
+  version "1.1.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/form-components/1.1.1/5f002cc179b9a5438d98bdcb8a5aa51ed798346e#5f002cc179b9a5438d98bdcb8a5aa51ed798346e"
+  integrity sha512-kp25mx0zK2s3xRDOj256Nxco2LQkfA1PIUdrmIfacc2zfwdGdzbkJeAxhgOJEt3XehCkfSBtdzO5n1BwjOkiVw==
   dependencies:
     "@braintree/sanitize-url" "^7.0.4"
     "@lambda-feedback-segp-sandbox/content-components" "^1.0.0"
