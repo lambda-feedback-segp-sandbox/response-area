@@ -21,16 +21,19 @@ export class CodeResponseAreaTub extends ResponseAreaTub {
 
   public readonly displayWideInput = true
 
-  protected answerSchema = codeResponseAnswerSchema
+  readonly answerSchema = codeResponseAnswerSchema
 
   protected answer?: string
 
-  protected configSchema = codeConfigSchema
+  readonly configSchema = codeConfigSchema
 
-  protected config?: z.infer<typeof codeConfigSchema>
+  protected _config?: z.infer<typeof codeConfigSchema>
+  get config(): z.infer<typeof codeConfigSchema> | undefined {
+    return this._config
+  }
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       language: 'python',
     }
   }

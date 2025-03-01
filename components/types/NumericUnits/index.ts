@@ -10,7 +10,7 @@ import { NumericUnits } from './NumericUnits.component'
 export class NumericUnitsResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'NUMERIC_UNITS'
 
-  protected answerSchema = z.string()
+  readonly answerSchema = z.string()
 
   protected answer?: string
 

@@ -19,22 +19,25 @@ export { MultipleChoice } from './MultipleChoice.component'
 export class MultipleChoiceResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'MULTIPLE_CHOICE'
 
-  protected configSchema = multipleChoiceConfigSchema
+  readonly configSchema = multipleChoiceConfigSchema
 
-  protected config?: MultipleChoiceConfigSchema
+  protected _config?: MultipleChoiceConfigSchema
+  get config(): MultipleChoiceConfigSchema | undefined {
+    return this._config
+  }
 
-  protected answerSchema = multipleChoiceAnswerSchema
+  readonly answerSchema = multipleChoiceAnswerSchema
 
   protected answer?: MultipleChoiceAnswerSchema
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       options: ['Option One', 'Option Two'],
       randomise: false,
       single: false,
     }
     this.answer = padAnswersFromOptions({
-      options: this.config.options,
+      options: this.config?.options ?? [],
     })
   }
 

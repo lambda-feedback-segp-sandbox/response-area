@@ -15,7 +15,7 @@
     "@lambda-feedback-segp-sandbox/icon-components": "^1.0.0",
     "@lambda-feedback-segp-sandbox/loading-components": "^1.0.0",
     "@lambda-feedback-segp-sandbox/math-components": "^1.0.0",
-    "@lambda-feedback-segp-sandbox/response-area-base": "^3.1.1",
+    "@lambda-feedback-segp-sandbox/response-area-base": "^3.2.0",
     "@lambda-feedback-segp-sandbox/styles": "^1.0.0",
     "@monaco-editor/react": "^4.6.0",
     "@mui/lab": "^5.0.0-alpha.100",

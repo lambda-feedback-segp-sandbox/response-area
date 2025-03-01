@@ -12,7 +12,7 @@ import { trueFalseAnswerSchema } from './TrueFalse.schema'
 export class TrueFalseResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'BOOLEAN'
 
-  protected answerSchema = trueFalseAnswerSchema
+  readonly answerSchema = trueFalseAnswerSchema
 
   protected answer?: boolean
 

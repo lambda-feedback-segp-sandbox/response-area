@@ -12,7 +12,7 @@ export class TextResponseAreaTub extends ResponseAreaTub {
 
   public readonly canToggleLatexInStats = true
 
-  protected answerSchema = textResponseAnswerSchema
+  readonly answerSchema = textResponseAnswerSchema
 
   protected answer?: string
 

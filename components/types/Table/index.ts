@@ -19,18 +19,21 @@ import { TableWizard } from './TableWizard.component'
 export class TableResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'TABLE'
 
-  protected configSchema = tableConfigSchema
+  readonly configSchema = tableConfigSchema
 
-  protected config?: z.infer<typeof tableConfigSchema>
+  protected _config?: z.infer<typeof tableConfigSchema>
+  get config(): z.infer<typeof tableConfigSchema> | undefined {
+    return this._config
+  }
 
-  protected answerSchema = tableResponseAnswerSchema
+  readonly answerSchema = tableResponseAnswerSchema
 
   protected answer?: z.infer<typeof tableResponseAnswerSchema>
 
   public readonly displayWideInput = true
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       rows: DEFAULT_ROWS,
       cols: DEFAULT_COLS,
       rowNames: _.fill(new Array(DEFAULT_ROWS), ''),

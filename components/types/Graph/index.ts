@@ -18,16 +18,19 @@ export { Graph } from './Graph.component'
 export class GraphResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'GRAPH'
 
-  protected configSchema = graphConfigSchema
+  readonly configSchema = graphConfigSchema
 
-  protected config?: GraphConfigSchema
+  _config?: GraphConfigSchema
+  get config(): GraphConfigSchema | undefined {
+    return this._config
+  }
 
-  protected answerSchema = graphAnswerSchema
+  readonly answerSchema = graphAnswerSchema
 
   protected answer?: GraphAnswerSchema
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       lowestX: -5,
       highestX: 5,
       lowestY: -5,
