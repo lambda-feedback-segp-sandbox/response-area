@@ -16,7 +16,7 @@ export class MilkdownResponseAreaTub extends ResponseAreaTub {
 
   public readonly displayAlwaysInColumn = true
 
-  protected answerSchema = milkdownResponseAnswerSchema
+  readonly answerSchema = milkdownResponseAnswerSchema
 
   protected answer?: string
 

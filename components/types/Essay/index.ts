@@ -14,7 +14,7 @@ export class EssayResponseAreaTub extends ResponseAreaTub {
 
   public readonly displayWideInput = true
 
-  protected answerSchema = essayResponseAnswerSchema
+  readonly answerSchema = essayResponseAnswerSchema
 
   protected answer?: string
 

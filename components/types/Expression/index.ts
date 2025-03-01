@@ -36,16 +36,19 @@ export class ExpressionResponseAreaTub extends ResponseAreaTub {
 
   public readonly displayInFlexContainer = false
 
-  protected configSchema = expressionConfigSchema
+  readonly configSchema = expressionConfigSchema
 
-  protected config?: ExpressionConfigSchema
+  protected _config?: ExpressionConfigSchema
+  get config(): ExpressionConfigSchema | undefined {
+    return this._config
+  }
 
-  protected answerSchema = expressionAnswerSchema
+  readonly answerSchema = expressionAnswerSchema
 
   protected answer?: ExpressionAnswerSchema
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       allowHandwrite: true,
       allowPhoto: true,
     }

@@ -12,7 +12,7 @@ export class NumberResponseAreaTub extends ResponseAreaTub {
 
   public readonly delegateErrorMessage = false
 
-  protected answerSchema = numberResponseAnswerSchema
+  readonly answerSchema = numberResponseAnswerSchema
 
   protected answer?: number | null
 

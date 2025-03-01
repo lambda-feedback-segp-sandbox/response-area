@@ -29,18 +29,21 @@ export const defaultMatrixAnswer = {
 export class MatrixResponseAreaTub extends ResponseAreaTub {
   public readonly responseType = 'MATRIX'
 
-  protected configSchema = matrixConfigSchema
+  readonly configSchema = matrixConfigSchema
 
-  protected config?: z.infer<typeof matrixConfigSchema>
+  _config?: z.infer<typeof matrixConfigSchema>
+  get config(): z.infer<typeof matrixConfigSchema> | undefined {
+    return this._config
+  }
 
-  protected answerSchema = matrixResponseAnswerSchema
+  readonly answerSchema = matrixResponseAnswerSchema
 
   protected answer?: z.infer<typeof matrixResponseAnswerSchema>
 
   public readonly displayWideInput = true
 
   initWithDefault = () => {
-    this.config = {
+    this._config = {
       rows: DEFAULT_ROWS,
       cols: DEFAULT_COLS,
     }
