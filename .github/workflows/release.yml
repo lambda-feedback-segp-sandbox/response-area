@@ -31,7 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.14.0'
+          registry-url: 'https://npm.pkg.github.com'
       - run: yarn install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: yarn typedoc --plugin typedoc-plugin-markdown --entryPointStrategy expand hooks/ schemas/ types/ utils/
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -41,6 +47,9 @@ jobs:
     name: Deploy Documentation
     needs: doc
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
