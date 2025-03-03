@@ -95,7 +95,7 @@ export const DrawMode: React.FC<DrawModeProps> = props => {
     setResponse(feedback)
   }, [feedback, setResponse])
 
-  const updatePreview = async (ref: RefObject<ReactSketchCanvasRef>) => {
+  const updatePreview = async (ref: RefObject<ReactSketchCanvasRef | null>) => {
     if (ref.current) {
       const dataUrl = await ref.current?.exportImage('png')
       postEquationImage(dataUrl)

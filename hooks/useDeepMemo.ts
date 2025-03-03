@@ -6,7 +6,7 @@ export const useDeepMemo = <T extends any>(
   deps: Array<unknown>,
 ): T => {
   const prevDeps = useRef(deps)
-  const prevValue = useRef<T>()
+  const prevValue = useRef<T | undefined>(undefined)
 
   if (_.isEqual(prevDeps.current, deps)) {
     return prevValue.current ?? callback()
