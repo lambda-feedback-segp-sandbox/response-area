@@ -12,7 +12,7 @@ export const useResponseAreaTub = (
   type?: string,
 ): RefObject<ResponseAreaTub | undefined> => {
   const prevType = usePrevious(type)
-  const tubRef = useRef<ResponseAreaTub>()
+  const tubRef = useRef<ResponseAreaTub | undefined>(undefined)
 
   if (!type) return tubRef
 

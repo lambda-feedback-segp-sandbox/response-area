@@ -8,7 +8,7 @@ import Select from '@mui/material/Select'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/system/Box'
 import useTheme from '@mui/system/useTheme'
-import React from 'react'
+import React, { JSX } from 'react'
 
 import { Stylable } from '../../../types/react'
 
