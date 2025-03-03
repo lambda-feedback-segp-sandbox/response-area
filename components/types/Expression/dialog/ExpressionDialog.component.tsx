@@ -9,7 +9,7 @@ import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import useTheme from '@mui/system/useTheme'
-import React from 'react'
+import React, { JSX } from 'react'
 
 import { Stylable } from '../../../../types/react'
 

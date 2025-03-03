@@ -1,6 +1,6 @@
 import { makeStyles } from '@lambda-feedback-segp-sandbox/styles'
 import Toolbar from '@mui/material/Toolbar'
-import React from 'react'
+import React, { JSX } from 'react'
 
 import { Stylable } from '../../../../types/react'
 

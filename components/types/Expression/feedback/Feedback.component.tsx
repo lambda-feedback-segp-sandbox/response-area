@@ -10,7 +10,7 @@ import {
 import LoadingButton from '@mui/lab/LoadingButton'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
-import React from 'react'
+import React, { JSX } from 'react'
 
 import { Stylable } from '../../../../types/react'
 
