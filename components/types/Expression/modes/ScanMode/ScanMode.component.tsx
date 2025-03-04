@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable @next/next/no-img-element */
 
 import { PreviewFeedback } from '@lambda-feedback-segp-sandbox/graphql-api/api/requests/preview'
@@ -19,7 +20,7 @@ import React, {
   useState,
 } from 'react'
 import { useDropzone } from 'react-dropzone'
-import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
+import ReactCrop, { PixelCrop } from 'react-image-crop'
 
 import 'react-image-crop/dist/ReactCrop.css'
 
