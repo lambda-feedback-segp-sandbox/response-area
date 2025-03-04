@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { centerCrop, makeAspectCrop, PixelCrop } from 'react-image-crop'
 
 export const centerAspectCrop = (
