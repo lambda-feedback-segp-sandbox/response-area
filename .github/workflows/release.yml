@@ -38,7 +38,7 @@ jobs:
       - run: yarn install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: yarn typedoc --entryPointStrategy expand hooks/ schemas/ types/ utils/
+      - run: yarn typedoc --entryPointStrategy expand hooks/ schemas/ types/ utils/ components/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs 
