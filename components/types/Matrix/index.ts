@@ -38,7 +38,10 @@ export class MatrixResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = matrixResponseAnswerSchema
 
-  protected answer?: z.infer<typeof matrixResponseAnswerSchema>
+  protected _answer?: z.infer<typeof matrixResponseAnswerSchema>
+  get answer(): z.infer<typeof matrixResponseAnswerSchema> | undefined {
+    return this._answer
+  }
 
   public readonly displayWideInput = true
 
@@ -47,7 +50,7 @@ export class MatrixResponseAreaTub extends ResponseAreaTub {
       rows: DEFAULT_ROWS,
       cols: DEFAULT_COLS,
     }
-    this.answer = padMatrixFromRowsAndCols({
+    this._answer = padMatrixFromRowsAndCols({
       rows: DEFAULT_ROWS,
       cols: DEFAULT_COLS,
     })
@@ -70,7 +73,7 @@ export class MatrixResponseAreaTub extends ResponseAreaTub {
     const parsedAnswer = this.answerSchema.safeParse(answerToParse)
     if (!parsedAnswer.success) throw new Error('Could not extract answer')
 
-    this.answer = parsedAnswer.data
+    this._answer = parsedAnswer.data
   }
 
   InputComponent = (props: BaseResponseAreaProps) => {

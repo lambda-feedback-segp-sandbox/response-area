@@ -45,14 +45,17 @@ export class ExpressionResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = expressionAnswerSchema
 
-  protected answer?: ExpressionAnswerSchema
+  protected _answer?: ExpressionAnswerSchema
+  get answer(): ExpressionAnswerSchema | undefined {
+    return this._answer
+  }
 
   initWithDefault = () => {
     this._config = {
       allowHandwrite: true,
       allowPhoto: true,
     }
-    this.answer = ''
+    this._answer = ''
   }
 
   InputComponent = (props: BaseResponseAreaProps) => {

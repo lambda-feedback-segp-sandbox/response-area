@@ -14,7 +14,10 @@ export class TrueFalseResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = trueFalseAnswerSchema
 
-  protected answer?: boolean
+  protected _answer?: boolean
+  get answer(): boolean | undefined {
+    return this._answer
+  }
 
   toResponse = (): IModularResponseSchema => {
     if (this.answer === undefined) throw new Error('Answer missing')

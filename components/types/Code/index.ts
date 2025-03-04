@@ -23,7 +23,10 @@ export class CodeResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = codeResponseAnswerSchema
 
-  protected answer?: string
+  protected _answer?: string
+  get answer(): string | undefined {
+    return this._answer
+  }
 
   readonly configSchema = codeConfigSchema
 

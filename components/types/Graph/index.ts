@@ -27,7 +27,10 @@ export class GraphResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = graphAnswerSchema
 
-  protected answer?: GraphAnswerSchema
+  protected _answer?: GraphAnswerSchema
+  get answer(): GraphAnswerSchema | undefined {
+    return this._answer
+  }
 
   initWithDefault = () => {
     this._config = {
@@ -39,7 +42,7 @@ export class GraphResponseAreaTub extends ResponseAreaTub {
       yScale: 1,
       studentAxis: false,
     }
-    this.answer = 'x'
+    this._answer = 'x'
   }
 
   InputComponent = (props: BaseResponseAreaProps) => {

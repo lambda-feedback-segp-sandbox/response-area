@@ -896,14 +896,15 @@
     markdown-to-jsx "^7.1.7"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/response-area-base@^3.2.0":
-  version "3.2.1"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/3.2.1/1b0da232be3c8d0761ffda95590643820506caa3#1b0da232be3c8d0761ffda95590643820506caa3"
-  integrity sha512-45tJzb2k/ClQc8yLZhL5BEEj+uUp3ePlyljUu/nFxJh+Hj1lkm/9EUKsRT27/qXFwXB4MeMzt7Ah/VZ0HEzHkw==
+"@lambda-feedback-segp-sandbox/response-area-base@^3.3.0":
+  version "3.3.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/3.3.0/2725704633f7dc72b6339aa5d36c9bccd9b035f7#2725704633f7dc72b6339aa5d36c9bccd9b035f7"
+  integrity sha512-4bssfIMuJS4uP5Jk2RIhwOeRoooyRxcvcYsyN9bxhTNXhDX9iMqnbUBANF+Simvd7CNLHNMa1JvB9n4xPspeIg==
   dependencies:
     "@lambda-feedback-segp-sandbox/graphql-api" "^1.0.0"
     react "^18.3.1"
     react-query "^3.39.0"
+    typedoc "^0.27.9"
     zod "^3.14.4"
 
 "@lambda-feedback-segp-sandbox/styles@^1.0.0":
@@ -5333,12 +5334,7 @@ typed-array-length@^1.0.7:
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
 
-typedoc-plugin-markdown@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.4.2.tgz#fc31779595aa9bf00e66709f3894e048345bf7ed"
-  integrity sha512-kJVkU2Wd+AXQpyL6DlYXXRrfNrHrEIUgiABWH8Z+2Lz5Sq6an4dQ/hfvP75bbokjNDUskOdFlEEm/0fSVyC7eg==
-
-typedoc@^0.27.6:
+typedoc@^0.27.6, typedoc@^0.27.9:
   version "0.27.9"
   resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.27.9.tgz#5e0a7bc32bfc7bd0b70a353f4f1d5cba3d667c46"
   integrity sha512-/z585740YHURLl9DN2jCWe6OW7zKYm6VoQ93H0sxZ1cwHQEQrUn5BJrEnkWhfzUdyO+BLGjnKUZ9iz9hKloFDw==

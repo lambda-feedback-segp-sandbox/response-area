@@ -14,7 +14,10 @@ export class NumberResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = numberResponseAnswerSchema
 
-  protected answer?: number | null
+  protected _answer?: number | null
+  get answer(): number | null | undefined {
+    return this._answer
+  }
 
   InputComponent = (props: BaseResponseAreaProps) => {
     const parsedAnswer = this.answerSchema.safeParse(props.answer)

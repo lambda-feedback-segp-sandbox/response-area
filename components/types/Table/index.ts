@@ -28,7 +28,10 @@ export class TableResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = tableResponseAnswerSchema
 
-  protected answer?: z.infer<typeof tableResponseAnswerSchema>
+  protected _answer?: z.infer<typeof tableResponseAnswerSchema>
+  get answer(): z.infer<typeof tableResponseAnswerSchema> | undefined {
+    return this._answer
+  }
 
   public readonly displayWideInput = true
 
@@ -39,7 +42,7 @@ export class TableResponseAreaTub extends ResponseAreaTub {
       rowNames: _.fill(new Array(DEFAULT_ROWS), ''),
       colNames: _.fill(new Array(DEFAULT_COLS), ''),
     }
-    this.answer = padMatrixFromRowsAndCols({
+    this._answer = padMatrixFromRowsAndCols({
       rows: DEFAULT_ROWS,
       cols: DEFAULT_COLS,
     })
@@ -62,7 +65,7 @@ export class TableResponseAreaTub extends ResponseAreaTub {
     const parsedAnswer = this.answerSchema.safeParse(answerToParse)
     if (!parsedAnswer.success) throw new Error('Could not extract answer')
 
-    this.answer = parsedAnswer.data
+    this._answer = parsedAnswer.data
   }
 
   InputComponent = (props: BaseResponseAreaProps) => {

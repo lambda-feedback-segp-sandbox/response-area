@@ -18,7 +18,10 @@ export class MilkdownResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = milkdownResponseAnswerSchema
 
-  protected answer?: string
+  protected _answer?: string
+  get answer(): string | undefined {
+    return this._answer
+  }
 
   InputComponent = (props: BaseResponseAreaProps) => {
     const parsedAnswer = this.answerSchema.safeParse(props.answer)

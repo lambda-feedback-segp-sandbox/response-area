@@ -28,7 +28,10 @@ export class MultipleChoiceResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = multipleChoiceAnswerSchema
 
-  protected answer?: MultipleChoiceAnswerSchema
+  protected _answer?: MultipleChoiceAnswerSchema
+  get answer(): MultipleChoiceAnswerSchema | undefined {
+    return this._answer
+  }
 
   initWithDefault = () => {
     this._config = {
@@ -36,7 +39,7 @@ export class MultipleChoiceResponseAreaTub extends ResponseAreaTub {
       randomise: false,
       single: false,
     }
-    this.answer = padAnswersFromOptions({
+    this._answer = padAnswersFromOptions({
       options: this.config?.options ?? [],
     })
   }

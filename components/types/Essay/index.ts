@@ -16,7 +16,10 @@ export class EssayResponseAreaTub extends ResponseAreaTub {
 
   readonly answerSchema = essayResponseAnswerSchema
 
-  protected answer?: string
+  protected _answer?: string
+  get answer(): string | undefined {
+    return this._answer
+  }
 
   InputComponent = (props: BaseResponseAreaProps) => {
     const parsedAnswer = this.answerSchema.safeParse(props.answer)
